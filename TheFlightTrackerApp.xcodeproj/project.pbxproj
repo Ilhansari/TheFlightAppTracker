@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F1CE36D2737D11C00EAFE92 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1CE36C2737D11C00EAFE92 /* TabbarController.swift */; };
+		0F1CE3702737E29500EAFE92 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1CE36F2737E29500EAFE92 /* UIImage+Extension.swift */; };
 		0F35DB982737C635002C3E5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35DB972737C635002C3E5C /* AppDelegate.swift */; };
 		0F35DB9A2737C635002C3E5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35DB992737C635002C3E5C /* SceneDelegate.swift */; };
 		0F35DBA12737C636002C3E5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F35DBA02737C636002C3E5C /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F1CE36C2737D11C00EAFE92 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		0F1CE36F2737E29500EAFE92 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		0F35DB942737C635002C3E5C /* TheFlightTrackerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheFlightTrackerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F35DB972737C635002C3E5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F35DB992737C635002C3E5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +76,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F1CE3622737CC7A00EAFE92 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0F1CE3712737E34800EAFE92 /* Common */,
+				0F1CE3632737CC9D00EAFE92 /* Scenes */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		0F1CE3632737CC9D00EAFE92 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				0F1CE3672737D01D00EAFE92 /* Root */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		0F1CE3672737D01D00EAFE92 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				0F1CE36C2737D11C00EAFE92 /* TabbarController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		0F1CE36E2737E24500EAFE92 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0F1CE36F2737E29500EAFE92 /* UIImage+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0F1CE3712737E34800EAFE92 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0F1CE36E2737E24500EAFE92 /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		0F35DB8B2737C635002C3E5C = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +140,9 @@
 		0F35DB962737C635002C3E5C /* TheFlightTrackerApp */ = {
 			isa = PBXGroup;
 			children = (
+				0F35DB992737C635002C3E5C /* SceneDelegate.swift */,
+				0F35DB972737C635002C3E5C /* AppDelegate.swift */,
+				0F1CE3622737CC7A00EAFE92 /* Sources */,
 				0F35DBC82737CAF7002C3E5C /* Supporting Files */,
 			);
 			path = TheFlightTrackerApp;
@@ -124,8 +172,6 @@
 				0F35DBA52737C636002C3E5C /* Info.plist */,
 				0F35DBA22737C636002C3E5C /* LaunchScreen.storyboard */,
 				0F35DBA02737C636002C3E5C /* Assets.xcassets */,
-				0F35DB992737C635002C3E5C /* SceneDelegate.swift */,
-				0F35DB972737C635002C3E5C /* AppDelegate.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -261,6 +307,8 @@
 			files = (
 				0F35DB982737C635002C3E5C /* AppDelegate.swift in Sources */,
 				0F35DB9A2737C635002C3E5C /* SceneDelegate.swift in Sources */,
+				0F1CE36D2737D11C00EAFE92 /* TabbarController.swift in Sources */,
+				0F1CE3702737E29500EAFE92 /* UIImage+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
