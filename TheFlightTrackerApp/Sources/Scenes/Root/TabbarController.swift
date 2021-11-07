@@ -40,7 +40,7 @@ private extension TabbarController {
     }
 
     private func configureTabbarController() -> [UIViewController] {
-        
+
         let airportsNavigationViewController = createTabbarItem(for: AirportsViewController(),
                                                                 title: "Airports",
                                                                 image: .airportsIcon,
@@ -69,14 +69,6 @@ private extension TabbarController {
         navigationController.navigationBar.tintColor = .blue
         navigationController.tabBarItem = UITabBarItem(title: title, image: image, tag: tag.rawValue)
         return navigationController
-    }
-}
-
-
-class AirportsViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .red
     }
 }
 
