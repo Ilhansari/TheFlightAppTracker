@@ -38,12 +38,9 @@ private extension TabbarController {
         view.backgroundColor = .black
         UITabBar.appearance().tintColor = .gray
     }
-}
 
-// MARK: - Helpers
-private extension TabbarController {
     private func configureTabbarController() -> [UIViewController] {
-
+        
         let airportsNavigationViewController = createTabbarItem(for: AirportsViewController(),
                                                                 title: "Airports",
                                                                 image: .airportsIcon,
