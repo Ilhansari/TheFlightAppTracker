@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		0F35DB982737C635002C3E5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35DB972737C635002C3E5C /* AppDelegate.swift */; };
 		0F35DB9A2737C635002C3E5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35DB992737C635002C3E5C /* SceneDelegate.swift */; };
-		0F35DB9C2737C635002C3E5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35DB9B2737C635002C3E5C /* ViewController.swift */; };
-		0F35DB9F2737C635002C3E5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F35DB9D2737C635002C3E5C /* Main.storyboard */; };
 		0F35DBA12737C636002C3E5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F35DBA02737C636002C3E5C /* Assets.xcassets */; };
 		0F35DBA42737C636002C3E5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F35DBA22737C636002C3E5C /* LaunchScreen.storyboard */; };
 		0F35DBAF2737C636002C3E5C /* TheFlightTrackerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35DBAE2737C636002C3E5C /* TheFlightTrackerAppTests.swift */; };
@@ -38,8 +36,6 @@
 		0F35DB942737C635002C3E5C /* TheFlightTrackerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheFlightTrackerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F35DB972737C635002C3E5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F35DB992737C635002C3E5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0F35DB9B2737C635002C3E5C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0F35DB9E2737C635002C3E5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0F35DBA02737C636002C3E5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F35DBA32737C636002C3E5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F35DBA52737C636002C3E5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,9 +76,9 @@
 			isa = PBXGroup;
 			children = (
 				0F35DB962737C635002C3E5C /* TheFlightTrackerApp */,
+				0F35DB952737C635002C3E5C /* Products */,
 				0F35DBAD2737C636002C3E5C /* TheFlightTrackerAppTests */,
 				0F35DBB82737C636002C3E5C /* TheFlightTrackerAppUITests */,
-				0F35DB952737C635002C3E5C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +95,7 @@
 		0F35DB962737C635002C3E5C /* TheFlightTrackerApp */ = {
 			isa = PBXGroup;
 			children = (
-				0F35DB972737C635002C3E5C /* AppDelegate.swift */,
-				0F35DB992737C635002C3E5C /* SceneDelegate.swift */,
-				0F35DB9B2737C635002C3E5C /* ViewController.swift */,
-				0F35DB9D2737C635002C3E5C /* Main.storyboard */,
-				0F35DBA02737C636002C3E5C /* Assets.xcassets */,
-				0F35DBA22737C636002C3E5C /* LaunchScreen.storyboard */,
-				0F35DBA52737C636002C3E5C /* Info.plist */,
+				0F35DBC82737CAF7002C3E5C /* Supporting Files */,
 			);
 			path = TheFlightTrackerApp;
 			sourceTree = "<group>";
@@ -126,6 +116,18 @@
 				0F35DBBB2737C636002C3E5C /* Info.plist */,
 			);
 			path = TheFlightTrackerAppUITests;
+			sourceTree = "<group>";
+		};
+		0F35DBC82737CAF7002C3E5C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0F35DBA52737C636002C3E5C /* Info.plist */,
+				0F35DBA22737C636002C3E5C /* LaunchScreen.storyboard */,
+				0F35DBA02737C636002C3E5C /* Assets.xcassets */,
+				0F35DB992737C635002C3E5C /* SceneDelegate.swift */,
+				0F35DB972737C635002C3E5C /* AppDelegate.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +235,6 @@
 			files = (
 				0F35DBA42737C636002C3E5C /* LaunchScreen.storyboard in Resources */,
 				0F35DBA12737C636002C3E5C /* Assets.xcassets in Resources */,
-				0F35DB9F2737C635002C3E5C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +259,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F35DB9C2737C635002C3E5C /* ViewController.swift in Sources */,
 				0F35DB982737C635002C3E5C /* AppDelegate.swift in Sources */,
 				0F35DB9A2737C635002C3E5C /* SceneDelegate.swift in Sources */,
 			);
@@ -296,14 +296,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0F35DB9D2737C635002C3E5C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0F35DB9E2737C635002C3E5C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0F35DBA22737C636002C3E5C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -366,7 +358,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -421,7 +413,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -438,7 +430,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 22SW3CPUDS;
-				INFOPLIST_FILE = TheFlightTrackerApp/Info.plist;
+				INFOPLIST_FILE = "TheFlightTrackerApp/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +449,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 22SW3CPUDS;
-				INFOPLIST_FILE = TheFlightTrackerApp/Info.plist;
+				INFOPLIST_FILE = "TheFlightTrackerApp/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
