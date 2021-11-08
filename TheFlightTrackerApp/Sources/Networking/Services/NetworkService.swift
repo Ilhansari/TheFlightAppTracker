@@ -9,29 +9,33 @@ import Foundation
 
 struct NetworkService<Resource> where Resource: Codable {
 
-  var resourceURL: NetworkEndpoint
+    var resourceURL: NetworkEndpoint
 
-  var session: URLSessionProtocol
+    var session: URLSessionProtocol
 
-  init(_ resourceURL: NetworkEndpoint, session: URLSessionProtocol = URLSession.shared) {
-    self.resourceURL = resourceURL
-    self.session = session
-  }
+    private var OK_200: Int {
+        return 200
+    }
+    
+    init(_ resourceURL: NetworkEndpoint, session: URLSessionProtocol = URLSession.shared) {
+        self.resourceURL = resourceURL
+        self.session = session
+    }
+
 }
 
 extension NetworkService {
   /// Get request with an array as a response.
   ///
-  func getData(_ completion: @escaping (Result<Resource>) -> Void) {
+  func getData(_ completion: @escaping (Result<[Resource], Error>) -> Void) {
 
-    
-    let dataTask = session.dataTask(with: resourceURL.url) { data, response, _ in
+    let dataTask = session.dataTask(with: resourceURL.url) { data, response, error in
       guard let httpResponse = response as? HTTPURLResponse else {
-        return completion(.failure)
+        return completion(.failure(NSError()))
       }
-      guard httpResponse.statusCode == 200,
+      guard httpResponse.statusCode == OK_200,
             let jsonData = data else {
-        return completion(.failure)
+        return completion(.failure(NSError()))
       }
       do {
         let resources = try JSONDecoder().decode([Resource].self,
@@ -39,7 +43,7 @@ extension NetworkService {
         completion(.success(resources))
       }
       catch {
-        completion(.failure)
+        completion(.failure(NSError()))
       }
     }
     dataTask.resume()

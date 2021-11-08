@@ -8,13 +8,13 @@
 import UIKit
 
 final class AirportDetailView: UIView {
-
+    
     // MARK: - Properties
     private lazy var titleLabel: UILabel = .create(font: UIFont.systemFont(ofSize: 20.0,
                                                                            weight: .bold),
                                                    textColor: .systemIndigo,
                                                    textAlignment: .center)
-
+    
     private lazy var idLabel: UILabel = .create()
     private lazy var latitudeLabel: UILabel = .create()
     private lazy var longitudeLabel: UILabel = .create()
@@ -23,9 +23,9 @@ final class AirportDetailView: UIView {
     private lazy var countyIdLabel: UILabel = .create()
     private lazy var nearestAirportLabel: UILabel = .create()
     private lazy var distanceAirportLabel: UILabel = .create()
-
+    
     var isInKm = UserDefaultsService.shared.isInKm
-
+    
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [
             titleLabel,
@@ -39,21 +39,21 @@ final class AirportDetailView: UIView {
             distanceAirportLabel
         ])
         stackView.axis = .vertical
-
-
+        
+        
         stackView.distribution = .fillEqually
         stackView.spacing = 20.0
         return stackView
     }()
-
+    
     private let distanceFormat = "%.2f %@"
-
+    
     init() {
         super.init(frame: .zero)
         
         arrangeViews()
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -61,7 +61,7 @@ final class AirportDetailView: UIView {
 
 // MARK: - Arrange Views
 private extension AirportDetailView {
-
+    
     func arrangeViews() {
         backgroundColor = .black
         addSubview(stackView)
@@ -74,7 +74,7 @@ private extension AirportDetailView {
 
 // MARK: - Populate UI
 extension AirportDetailView {
-
+    
     func populateUI(model: AirportDetailsModel) {
         titleLabel.text = "Airport Details"
         idLabel.text = "ID: \(model.airport.id)"

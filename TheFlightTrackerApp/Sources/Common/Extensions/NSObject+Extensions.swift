@@ -16,7 +16,7 @@ public extension ViewIdentifier {
     static var viewIdentifier: String {
         String(describing: self)
     }
-
+    
     var viewIdentifier: String {
         let typeOfSelf = type(of: self)
         return String(describing: typeOfSelf)

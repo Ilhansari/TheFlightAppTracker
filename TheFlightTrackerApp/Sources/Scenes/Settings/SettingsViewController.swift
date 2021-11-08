@@ -23,17 +23,17 @@ final class SettingsViewController: UIViewController {
     private func setupSegmentedControl() {
         viewSource.segmentedControl.selectedSegmentIndex = isInKm ? 0 : 1
         viewSource.segmentedControl.addTarget(self,
-                                                  action: #selector(changeUnit),
-                                                  for: .valueChanged)
+                                              action: #selector(changeUnit),
+                                              for: .valueChanged)
     }
 
     @objc func changeUnit() {
         switch viewSource.segmentedControl.selectedSegmentIndex {
-      case 0:
-        UserDefaultsService.shared.isInKm = true
-      case 1:
-        UserDefaultsService.shared.isInKm = false
-      default: ()
-      }
+        case 0:
+            UserDefaultsService.shared.isInKm = true
+        case 1:
+            UserDefaultsService.shared.isInKm = false
+        default: ()
+        }
     }
 }

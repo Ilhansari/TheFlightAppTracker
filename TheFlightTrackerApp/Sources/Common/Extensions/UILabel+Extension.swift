@@ -14,7 +14,7 @@ extension UILabel {
                        font: UIFont = .systemFont(ofSize: 16.0, weight: .semibold),
                        textColor: UIColor = .white,
                        textAlignment: NSTextAlignment = .left) -> UILabel {
-
+        
         let label = UILabel()
         label.numberOfLines = numberOfLines
         label.font = font

@@ -8,17 +8,19 @@
 import UIKit
 
 final class SettingsView: UIView {
-
-    private let SegmentItems = ["kilometers", "miles"]
-
+    
+    // MARK: - Properties
     lazy var segmentedControl: UISegmentedControl = {
-        let segmentedControl = UISegmentedControl(items: SegmentItems)
+        let segmentItems = ["kilometers", "miles"]
+        let segmentedControl = UISegmentedControl(items: segmentItems)
         segmentedControl.layer.cornerRadius = 8
         return segmentedControl
     }()
-
-    private lazy var sectionLabel: UILabel = .create(text: "Unit", textColor: .white, textAlignment: .center)
-
+    
+    private lazy var sectionLabel: UILabel = .create(text: "Unit",
+                                                     textColor: .white,
+                                                     textAlignment: .center)
+    
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [sectionLabel, segmentedControl])
         stackView.axis = .vertical
@@ -26,20 +28,22 @@ final class SettingsView: UIView {
         stackView.spacing = 10.0
         return stackView
     }()
-
+    
+    // MARK: - Initialization
     init() {
         super.init(frame: .zero)
-
+        
         arrangeViews()
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
 
+// MARK: - Arrange Views
 private extension SettingsView {
-
+    
     func arrangeViews() {
         backgroundColor = .lightGray
         
