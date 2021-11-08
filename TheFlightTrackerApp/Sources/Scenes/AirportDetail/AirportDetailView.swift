@@ -12,7 +12,7 @@ final class AirportDetailView: UIView {
     // MARK: - Properties
     private lazy var titleLabel: UILabel = .create(font: UIFont.systemFont(ofSize: 20.0,
                                                                            weight: .bold),
-                                                   textColor: .red,
+                                                   textColor: .systemIndigo,
                                                    textAlignment: .center)
 
     private lazy var idLabel: UILabel = .create()
@@ -65,7 +65,7 @@ private extension AirportDetailView {
     func arrangeViews() {
         backgroundColor = .black
         addSubview(stackView)
-        stackView.anchor(top: topAnchor,
+        stackView.anchor(top: safeAreaLayoutGuide.topAnchor,
                          leading: leadingAnchor,
                          trailing: trailingAnchor,
                          padding: UIEdgeInsets(top: 24.0, left: 12.0, bottom: 0.0, right: 12.0))

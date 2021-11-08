@@ -19,6 +19,7 @@ final class AirportsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         view = viewSource
 
         viewSource.startMapping()

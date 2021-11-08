@@ -10,7 +10,7 @@ import UIKit
 final class FlightCell: UITableViewCell {
 
     private lazy var nameLabel: UILabel = .create(textColor: .black)
-    private lazy var distanceLabel: UILabel = .create(textColor: .blue)
+    private lazy var distanceLabel: UILabel = .create(textColor: .systemIndigo)
 
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [

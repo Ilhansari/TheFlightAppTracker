@@ -36,7 +36,7 @@ final class AirportsView: UIView {
 
     private lazy var detailDisclosureButton: UIButton = {
         let button = UIButton(type: .detailDisclosure)
-        button.tintColor = .blue
+        button.tintColor = .systemIndigo
         return button
     }()
     
