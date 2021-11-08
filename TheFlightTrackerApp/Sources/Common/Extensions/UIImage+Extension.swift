@@ -11,10 +11,9 @@ import UIKit
 ///
 /// Images are inside the Assets.xcassets
 extension UIImage {
-
-  static let airportsIcon = UIImage(named: "airportsIcon")
-
-  static let flightsIcon = UIImage(named: "flightsIcon")
-
-  static let settingsIcon = UIImage(named: "settingsIcon")
+    static let airportsIcon = UIImage(named: "airportsIcon")
+    static let flightsIcon = UIImage(named: "flightsIcon")
+    static let settingsIcon = UIImage(named: "settingsIcon")
+    static let flightAnnotation = UIImage(named: "flightAnnotation")
+    static let goldFlightAnnotation = UIImage(named: "goldFlightAnnotation")
 }
