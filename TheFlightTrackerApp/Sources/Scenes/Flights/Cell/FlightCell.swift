@@ -8,8 +8,10 @@
 import UIKit
 
 final class FlightCell: UITableViewCell {
-    
+
+    // MARK: - Properties
     private lazy var nameLabel: UILabel = .create(textColor: .black)
+    
     private lazy var distanceLabel: UILabel = .create(textColor: .systemIndigo)
     
     private lazy var stackView: UIStackView = {
@@ -22,7 +24,8 @@ final class FlightCell: UITableViewCell {
         stackView.spacing = 10.0
         return stackView
     }()
-    
+
+    // MARK: - Initialization
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -46,6 +49,7 @@ private extension FlightCell {
     }
 }
 
+// MARK: - Populate UI
 extension FlightCell {
     
     func populateUI(model: AirportsModel, distance: String) {

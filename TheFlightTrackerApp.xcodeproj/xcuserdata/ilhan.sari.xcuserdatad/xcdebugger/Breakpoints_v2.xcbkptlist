@@ -14,25 +14,9 @@
             filePath = "TheFlightTrackerApp/Sources/Scenes/AirportDetail/AirportDetailView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "populateUI(model:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "325CC7D3-BA31-408F-9C02-6168D2B3C4D1"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TheFlightTrackerApp/Sources/Scenes/Airports/AirportsView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "175"
-            endingLineNumber = "175"
-            landmarkName = "setAnnotationImage(for:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -81,6 +65,22 @@
             startingLineNumber = "40"
             endingLineNumber = "40"
             landmarkName = "changeUnit()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DEBA4339-0243-439A-9D1E-E41EC2DC3CA6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheFlightTrackerApp/Sources/Scenes/Airports/AirportsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
+            landmarkName = "setAnnotationImage(for:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

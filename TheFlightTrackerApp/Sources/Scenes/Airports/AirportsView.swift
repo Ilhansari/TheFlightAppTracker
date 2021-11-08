@@ -96,8 +96,7 @@ extension AirportsView: CLLocationManagerDelegate {
             locationManager.startUpdatingLocation()
         case .notDetermined:
             locationManager.requestAlwaysAuthorization()
-        default:
-            break
+        default: ()
         }
     }
     
@@ -179,23 +178,23 @@ extension AirportsView {
     }
     
     func foundAirportsFurthestApart() {
-        var distance: CLLocationDistance = .zero
-        let x = airportModels.reversed()
-        var y = airportModels
+        var defaultDistance: CLLocationDistance = .zero
+        let lastAirports = airportModels.reversed()
+        var firstAirports = airportModels
         
-        for a in x {
-            for b in y {
+        for lastAirport in lastAirports {
+            for firstAirport in firstAirports {
                 
-                let d = a.distance(isInKm, to: b.location)
+                let distance = lastAirport.distance(isInKm, to: firstAirport.location)
                 
-                if d > distance {
-                    distance = d
+                if distance > defaultDistance {
+                    defaultDistance = distance
                     furthestAirports = []
-                    furthestAirports.append(a)
-                    furthestAirports.append(b)
+                    furthestAirports.append(lastAirport)
+                    furthestAirports.append(firstAirport)
                     
-                    if let index = y.firstIndex(of: b) {
-                        y.remove(at: index)
+                    if let index = firstAirports.firstIndex(of: firstAirport) {
+                        firstAirports.remove(at: index)
                     }
                 }
             }
@@ -230,4 +229,6 @@ extension AirportsView {
         }
         return nil
     }
+
+
 }

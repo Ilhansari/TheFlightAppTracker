@@ -22,12 +22,19 @@ final class AirportDetailView: UIView {
                                                    textAlignment: .center)
     
     private lazy var idLabel: UILabel = .create()
+
     private lazy var latitudeLabel: UILabel = .create()
+
     private lazy var longitudeLabel: UILabel = .create()
+
     private lazy var nameLabel: UILabel = .create()
+
     private lazy var cityLabel: UILabel = .create()
+
     private lazy var countyIdLabel: UILabel = .create()
+
     private lazy var nearestAirportLabel: UILabel = .create()
+
     private lazy var distanceAirportLabel: UILabel = .create()
     
     var isInKm = UserDefaultsService.shared.isInKm

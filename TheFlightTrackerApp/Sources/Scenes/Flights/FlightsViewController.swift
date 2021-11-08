@@ -32,6 +32,7 @@ final class FlightsViewController: UIViewController {
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
 extension FlightsViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.countAirports()
     }
@@ -48,6 +49,20 @@ extension FlightsViewController: UITableViewDelegate, UITableViewDataSource {
 
 // MARK: - FlightsViewModelDelegate
 extension FlightsViewController: FlightsViewModelDelegate {
+
+    func handleLoading(isLoading: Bool) {
+        DispatchQueue.main.async {
+            isLoading ? self.showSpinner(onView: self.view) : self.removeSpinner()
+        }
+    }
+
+    func handleShowAlert(message: String) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.showAlert(title: "Error !", message: message)
+        }
+    }
+
     func didLoadData() {
         DispatchQueue.main.async {
             self.viewSource.tableView.reloadData()

@@ -28,7 +28,6 @@ final class AirportsViewModel {
             case .failure(let error):
                 self.delegate?.handleShowAlert(message: error.localizedDescription)
                 self.delegate?.handleLoading(isLoading: false)
-                break
             }
         }
     }

@@ -10,6 +10,8 @@ import CoreLocation
 
 protocol FlightsViewModelDelegate: AnyObject {
     func didLoadData()
+    func handleLoading(isLoading: Bool)
+    func handleShowAlert(message: String)
 }
 
 final class FlightsViewModel {
@@ -38,20 +40,24 @@ final class FlightsViewModel {
     
     private func getFlightsData() {
         let flightService = NetworkService<FlightModel>(.flights)
+        self.delegate?.handleLoading(isLoading: true)
         flightService.getData { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let response):
                 self.flightsModel = response
                 self.getAirportsData()
-            case .failure:
-                break
+                self.delegate?.handleLoading(isLoading: false)
+            case .failure(let error):
+                self.delegate?.handleShowAlert(message: error.localizedDescription)
+                self.delegate?.handleLoading(isLoading: false)
             }
         }
     }
     
     private func getAirportsData() {
         let airportsService = NetworkService<AirportsModel>(.airports)
+        self.delegate?.handleLoading(isLoading: true)
         airportsService.getData { [weak self] result in
             guard let self = self else { return }
             switch result {
@@ -59,8 +65,10 @@ final class FlightsViewModel {
                 self.airportsModel = response
                 self.populateAirports()
                 self.delegate?.didLoadData()
-            case .failure:
-                break
+                self.delegate?.handleLoading(isLoading: false)
+            case .failure(let error):
+                self.delegate?.handleShowAlert(message: error.localizedDescription)
+                self.delegate?.handleLoading(isLoading: false)
             }
         }
     }
