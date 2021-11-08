@@ -14,8 +14,6 @@ protocol AirportsViewModelDelegate: AnyObject {
 final class AirportsViewModel {
 
     // MARK: - Properties
-    private var airportsModel = [AirportsModel]()
-
     weak var delegate: AirportsViewModelDelegate?
 
     func getAirportsData() {
@@ -24,8 +22,9 @@ final class AirportsViewModel {
             guard let self = self else { return }
             switch result {
             case .success(let response):
-                self.airportsModel = response
-                self.delegate?.handleData(airportsModel: response)
+                DispatchQueue.main.async {
+                    self.delegate?.handleData(airportsModel: response)
+                }
             case .failure:
                 break
             }
