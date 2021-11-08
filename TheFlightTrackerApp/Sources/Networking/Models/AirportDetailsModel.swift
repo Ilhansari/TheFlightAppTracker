@@ -9,6 +9,6 @@ import Foundation
 
 struct AirportDetailsModel {
     let airport: AirportsModel
-    let nearestAirport: String
+    let nearestAirport: String?
     let airportsDistance: Double
 }

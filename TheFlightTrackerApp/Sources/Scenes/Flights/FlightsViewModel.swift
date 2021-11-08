@@ -13,17 +13,19 @@ protocol FlightsViewModelDelegate: AnyObject {
 }
 
 final class FlightsViewModel {
+
+    private enum Constants {
+        static let distanceFormatString = "%.2f %@"
+        static let schipholAirportID = "AMS"
+
+        static let schipholLocation: CLLocation = CLLocation(latitude: 52.30907, longitude: 4.763385)
+    }
     
     var flightsModel = [FlightModel]()
     var flightsConnectedModel =  [FlightModel]()
     var airportsModel = [AirportsModel]()
     var airportsConnectedModel =  [AirportsModel]()
-    
-    let distanceFormat = "%.2f %@"
-    let schipholAirportID = "AMS"
-    let schipholLocation = CLLocation(latitude: 52.30907,
-                                      longitude: 4.763385)
-    
+
     var isInKm = UserDefaultsService.shared.isInKm
     var trackIsInKm = !UserDefaultsService.shared.isInKm
     
@@ -82,15 +84,15 @@ final class FlightsViewModel {
     }
     
     func distanceFromSchiphol(to airport: AirportsModel) -> String {
-        let distance = airport.distance(isInKm, to: schipholLocation)
+        let distance = airport.distance(isInKm, to: Constants.schipholLocation)
         let unit = isInKm ? "km" : "mi"
-        let airportDistance = String(format: distanceFormat, distance, unit)
+        let airportDistance = String(format: Constants.distanceFormatString, distance, unit)
         return airportDistance
     }
     
     private func filterFlightsFromSchiphol() {
         let _ = flightsModel
-            .filter { $0.departureAirportId == schipholAirportID }
+            .filter { $0.departureAirportId == Constants.schipholAirportID }
             .map { flightsFilterConnected($0) }
     }
     
@@ -101,8 +103,8 @@ final class FlightsViewModel {
     private func sortConnectedAirports() {
         airportsConnectedModel
             .sort {
-                $0.distance(isInKm, to: schipholLocation)
-                    < $1.distance(isInKm, to: schipholLocation)
+                $0.distance(isInKm, to: Constants.schipholLocation)
+                    < $1.distance(isInKm, to: Constants.schipholLocation)
             }
     }
     

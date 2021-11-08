@@ -8,6 +8,12 @@
 import UIKit
 
 final class AirportDetailView: UIView {
+
+    private enum Constants {
+        static let distanceFormat = "%.2f %@"
+        static let kmUnit = "km"
+        static let milesUnit = "mi"
+    }
     
     // MARK: - Properties
     private lazy var titleLabel: UILabel = .create(font: UIFont.systemFont(ofSize: 20.0,
@@ -39,15 +45,11 @@ final class AirportDetailView: UIView {
             distanceAirportLabel
         ])
         stackView.axis = .vertical
-        
-        
         stackView.distribution = .fillEqually
         stackView.spacing = 20.0
         return stackView
     }()
-    
-    private let distanceFormat = "%.2f %@"
-    
+
     init() {
         super.init(frame: .zero)
         
@@ -83,9 +85,9 @@ extension AirportDetailView {
         nameLabel.text = "NAME: \(model.airport.name)"
         cityLabel.text = "CITY: \(model.airport.city)"
         countyIdLabel.text = "COUNTRY ID: \(model.airport.countryId)"
-        nearestAirportLabel.text = "NEAREST AIRPORT: \(model.nearestAirport)"
-        let unit = isInKm ? "km" : "mi"
-        let airportDistance = String(format: distanceFormat, model.airportsDistance, unit)
+        nearestAirportLabel.text = "NEAREST AIRPORT: \(model.nearestAirport ?? "")"
+        let unit = isInKm ? Constants.kmUnit : Constants.milesUnit
+        let airportDistance = String(format: Constants.distanceFormat, model.airportsDistance, unit)
         distanceAirportLabel.text = "DISTANCE AIRPORT: \(airportDistance)"
     }
 }

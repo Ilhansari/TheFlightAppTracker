@@ -222,7 +222,7 @@ extension AirportsView {
                 }
                 
                 let airportDetails = AirportDetailsModel(airport: firstAirport,
-                                                         nearestAirport: nearestAirport?.name ?? "",
+                                                         nearestAirport: nearestAirport?.name,
                                                          airportsDistance: Constants.airportsDistance)
                 
                 return airportDetails
