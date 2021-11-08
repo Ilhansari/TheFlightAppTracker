@@ -28,8 +28,8 @@ final class FlightsViewModel {
     var airportsModel = [AirportsModel]()
     var airportsConnectedModel =  [AirportsModel]()
 
-    var isInKm = UserDefaultsService.shared.isInKm
-    var trackIsInKm = !UserDefaultsService.shared.isInKm
+    var isKm = UserDefaultsService.shared.isKm
+    var trackIsKm = !UserDefaultsService.shared.isKm
     
     weak var delegate: FlightsViewModelDelegate?
     
@@ -78,10 +78,10 @@ final class FlightsViewModel {
     }
     
     func checkDistanceUnitSettings() {
-        isInKm = UserDefaultsService.shared.isInKm
-        if trackIsInKm == isInKm {
+        isKm = UserDefaultsService.shared.isKm
+        if trackIsKm == isKm {
             getFlightsData()
-            trackIsInKm = !UserDefaultsService.shared.isInKm
+            isKm = !UserDefaultsService.shared.isKm
         }
     }
     
@@ -92,8 +92,8 @@ final class FlightsViewModel {
     }
     
     func distanceFromSchiphol(to airport: AirportsModel) -> String {
-        let distance = airport.distance(isInKm, to: Constants.schipholLocation)
-        let unit = isInKm ? "km" : "mi"
+        let distance = airport.distance(isKm, to: Constants.schipholLocation)
+        let unit = isKm ? "km" : "mi"
         let airportDistance = String(format: Constants.distanceFormatString, distance, unit)
         return airportDistance
     }
@@ -111,8 +111,8 @@ final class FlightsViewModel {
     private func sortConnectedAirports() {
         airportsConnectedModel
             .sort {
-                $0.distance(isInKm, to: Constants.schipholLocation)
-                    < $1.distance(isInKm, to: Constants.schipholLocation)
+                $0.distance(isKm, to: Constants.schipholLocation)
+                    < $1.distance(isKm, to: Constants.schipholLocation)
             }
     }
     

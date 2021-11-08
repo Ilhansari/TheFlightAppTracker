@@ -23,12 +23,12 @@ final class UserDefaultsService {
 // MARK: - Containers
 extension UserDefaultsService {
 
-    var isInKm: Bool {
+    var isKm: Bool {
         get {
-            userDefaultsContainer.isInKm
+            userDefaultsContainer.isKm
         }
         set {
-            userDefaultsContainer.isInKm = newValue
+            userDefaultsContainer.isKm = newValue
         }
     }
 }

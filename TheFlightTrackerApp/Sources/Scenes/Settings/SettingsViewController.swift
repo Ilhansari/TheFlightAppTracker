@@ -16,7 +16,7 @@ final class SettingsViewController: UIViewController {
         static let milesValue = 1
     }
 
-    private var isInKm = UserDefaultsService.shared.isInKm
+    private var isKm = UserDefaultsService.shared.isKm
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ final class SettingsViewController: UIViewController {
     }
 
     private func setupSegmentedControl() {
-        viewSource.segmentedControl.selectedSegmentIndex = isInKm ? Constants.kmValue : Constants.milesValue
+        viewSource.segmentedControl.selectedSegmentIndex = isKm ? Constants.kmValue : Constants.milesValue
         viewSource.segmentedControl.addTarget(self,
                                               action: #selector(changeUnit),
                                               for: .valueChanged)
@@ -35,9 +35,9 @@ final class SettingsViewController: UIViewController {
     @objc func changeUnit() {
         switch viewSource.segmentedControl.selectedSegmentIndex {
         case Constants.kmValue:
-            UserDefaultsService.shared.isInKm = true
+            UserDefaultsService.shared.isKm = true
         case Constants.milesValue:
-            UserDefaultsService.shared.isInKm = false
+            UserDefaultsService.shared.isKm = false
         default: ()
         }
     }

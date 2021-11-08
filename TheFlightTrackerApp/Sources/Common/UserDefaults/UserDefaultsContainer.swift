@@ -11,7 +11,7 @@ import Foundation
 final class UserDefaultsContainer {
 
     struct Key {
-        static let isInKm = "isInKm"
+        static let isKm = "isKm"
     }
 
     let IsInKmDefaultValue = "true"
@@ -20,23 +20,23 @@ final class UserDefaultsContainer {
     init() {
         UserDefaults
             .standard
-            .register(defaults: [Key.isInKm: IsInKmDefaultValue])
+            .register(defaults: [Key.isKm: IsInKmDefaultValue])
     }
 }
 
 // MARK: - Containers
 extension UserDefaultsContainer: UserDefaultsProtocol {
     
-    var isInKm: Bool {
+    var isKm: Bool {
         get {
             UserDefaults
                 .standard
-                .bool(forKey: Key.isInKm)
+                .bool(forKey: Key.isKm)
         }
         set {
             UserDefaults
                 .standard
-                .setValue(newValue, forKey: Key.isInKm)
+                .setValue(newValue, forKey: Key.isKm)
         }
     }
 }

@@ -144,8 +144,8 @@
 		0F1CE3622737CC7A00EAFE92 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				0F1CE3DE273823F300EAFE92 /* Networking */,
 				0F1CE3712737E34800EAFE92 /* Common */,
+				0F1CE3DE273823F300EAFE92 /* Networking */,
 				0F1CE3632737CC9D00EAFE92 /* Scenes */,
 			);
 			path = Sources;
@@ -174,12 +174,12 @@
 		0F1CE36E2737E24500EAFE92 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				0F1CE36F2737E29500EAFE92 /* UIImage+Extension.swift */,
-				0F1CE3A52738084A00EAFE92 /* UIView+Extensions.swift */,
-				0FDED82F27390B0D007C6FA0 /* UILabel+Extension.swift */,
 				0FDED83E27391EA6007C6FA0 /* NSObject+Extensions.swift */,
-				0FDED84F273962A3007C6FA0 /* UIViewController+Extension.swift */,
 				0F3F54A12739ABDF005935E8 /* UIColor+Extensions.swift */,
+				0F1CE36F2737E29500EAFE92 /* UIImage+Extension.swift */,
+				0FDED82F27390B0D007C6FA0 /* UILabel+Extension.swift */,
+				0F1CE3A52738084A00EAFE92 /* UIView+Extensions.swift */,
+				0FDED84F273962A3007C6FA0 /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -236,8 +236,8 @@
 		0F1CE3F02738F1ED00EAFE92 /* AirportDetail */ = {
 			isa = PBXGroup;
 			children = (
-				0F1CE3F12738F20000EAFE92 /* AirportDetailViewController.swift */,
 				0F1CE3F32738F21700EAFE92 /* AirportDetailView.swift */,
+				0F1CE3F12738F20000EAFE92 /* AirportDetailViewController.swift */,
 			);
 			path = AirportDetail;
 			sourceTree = "<group>";
@@ -265,8 +265,8 @@
 		0F35DB962737C635002C3E5C /* TheFlightTrackerApp */ = {
 			isa = PBXGroup;
 			children = (
-				0F35DB992737C635002C3E5C /* SceneDelegate.swift */,
 				0F35DB972737C635002C3E5C /* AppDelegate.swift */,
+				0F35DB992737C635002C3E5C /* SceneDelegate.swift */,
 				0F1CE3622737CC7A00EAFE92 /* Sources */,
 				0F35DBC82737CAF7002C3E5C /* Supporting Files */,
 			);
@@ -304,10 +304,10 @@
 		0FDED83427391B6E007C6FA0 /* Flights */ = {
 			isa = PBXGroup;
 			children = (
-				0FDED83527391B7D007C6FA0 /* FlightsViewController.swift */,
-				0FDED83727391B89007C6FA0 /* FlightsView.swift */,
-				0FDED83927391BCB007C6FA0 /* FlightsViewModel.swift */,
 				0FDED83B27391C30007C6FA0 /* Cell */,
+				0FDED83727391B89007C6FA0 /* FlightsView.swift */,
+				0FDED83527391B7D007C6FA0 /* FlightsViewController.swift */,
+				0FDED83927391BCB007C6FA0 /* FlightsViewModel.swift */,
 			);
 			path = Flights;
 			sourceTree = "<group>";
@@ -332,9 +332,9 @@
 		0FDED84927393CC6007C6FA0 /* UserDefaults */ = {
 			isa = PBXGroup;
 			children = (
-				0FDED84727393C68007C6FA0 /* UserDefaultService.swift */,
-				0FDED84A27393CF9007C6FA0 /* UserDefaultsContainer.swift */,
 				0FDED84C27393D15007C6FA0 /* UserDefaultProtocol.swift */,
+				0FDED84A27393CF9007C6FA0 /* UserDefaultsContainer.swift */,
+				0FDED84727393C68007C6FA0 /* UserDefaultService.swift */,
 			);
 			path = UserDefaults;
 			sourceTree = "<group>";

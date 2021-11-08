@@ -37,7 +37,7 @@ final class AirportDetailView: UIView {
 
     private lazy var distanceAirportLabel: UILabel = .create()
     
-    var isInKm = UserDefaultsService.shared.isInKm
+    var isInKm = UserDefaultsService.shared.isKm
     
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [

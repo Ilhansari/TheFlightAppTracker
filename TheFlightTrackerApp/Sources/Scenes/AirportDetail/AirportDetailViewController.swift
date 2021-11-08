@@ -35,6 +35,6 @@ final class AirportDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        viewSource.isInKm = UserDefaultsService.shared.isInKm
+        viewSource.isInKm = UserDefaultsService.shared.isKm
     }
 }

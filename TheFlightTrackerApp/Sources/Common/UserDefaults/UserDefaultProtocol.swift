@@ -9,5 +9,5 @@ import Foundation
 
 protocol UserDefaultsProtocol {
     
-    var isInKm: Bool { get set }
+    var isKm: Bool { get set }
 }

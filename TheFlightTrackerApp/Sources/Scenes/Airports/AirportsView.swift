@@ -33,7 +33,7 @@ final class AirportsView: UIView {
     
     weak var delegate: AirportsViewDelegate?
     
-    private var isInKm = UserDefaultsService.shared.isInKm
+    private var isKm = UserDefaultsService.shared.isKm
     
     private lazy var detailDisclosureButton: UIButton = {
         let button = UIButton(type: .detailDisclosure)
@@ -72,7 +72,7 @@ final class AirportsView: UIView {
     }
     
     func checkDistanceUnitSettings() {
-        isInKm = UserDefaultsService.shared.isInKm
+        isKm = UserDefaultsService.shared.isKm
     }
 }
 
@@ -185,7 +185,7 @@ extension AirportsView {
         for lastAirport in lastAirports {
             for firstAirport in firstAirports {
                 
-                let distance = lastAirport.distance(isInKm, to: firstAirport.location)
+                let distance = lastAirport.distance(isKm, to: firstAirport.location)
                 
                 if distance > defaultDistance {
                     defaultDistance = distance
@@ -212,7 +212,7 @@ extension AirportsView {
             if firstAirport.name == view.annotation?.title {
                 
                 for secondAirport in airportModels {
-                    let distance = firstAirport.distance(isInKm, to: secondAirport.location)
+                    let distance = firstAirport.distance(isKm, to: secondAirport.location)
                     
                     if distance < Constants.airportsDistance && firstAirport.id != secondAirport.id {
                         Constants.airportsDistance = distance
