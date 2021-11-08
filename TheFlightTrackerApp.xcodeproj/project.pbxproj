@@ -19,12 +19,16 @@
 		0F1CE3E72738278300EAFE92 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1CE3E62738278300EAFE92 /* NetworkService.swift */; };
 		0F1CE3E927382AAC00EAFE92 /* URLSession+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1CE3E827382AAC00EAFE92 /* URLSession+Protocol.swift */; };
 		0F1CE3EC27382AF700EAFE92 /* AirportsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1CE3EB27382AF700EAFE92 /* AirportsModel.swift */; };
+		0F1CE3F22738F20000EAFE92 /* AirportDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1CE3F12738F20000EAFE92 /* AirportDetailViewController.swift */; };
+		0F1CE3F42738F21700EAFE92 /* AirportDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1CE3F32738F21700EAFE92 /* AirportDetailView.swift */; };
 		0F35DB982737C635002C3E5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35DB972737C635002C3E5C /* AppDelegate.swift */; };
 		0F35DB9A2737C635002C3E5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35DB992737C635002C3E5C /* SceneDelegate.swift */; };
 		0F35DBA12737C636002C3E5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F35DBA02737C636002C3E5C /* Assets.xcassets */; };
 		0F35DBA42737C636002C3E5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F35DBA22737C636002C3E5C /* LaunchScreen.storyboard */; };
 		0F35DBAF2737C636002C3E5C /* TheFlightTrackerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35DBAE2737C636002C3E5C /* TheFlightTrackerAppTests.swift */; };
 		0F35DBBA2737C636002C3E5C /* TheFlightTrackerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35DBB92737C636002C3E5C /* TheFlightTrackerAppUITests.swift */; };
+		0FDED82E273901DA007C6FA0 /* AirportDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED82D273901DA007C6FA0 /* AirportDetailsModel.swift */; };
+		0FDED83027390B0D007C6FA0 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED82F27390B0D007C6FA0 /* UILabel+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +74,8 @@
 		0F1CE3E62738278300EAFE92 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		0F1CE3E827382AAC00EAFE92 /* URLSession+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Protocol.swift"; sourceTree = "<group>"; };
 		0F1CE3EB27382AF700EAFE92 /* AirportsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsModel.swift; sourceTree = "<group>"; };
+		0F1CE3F12738F20000EAFE92 /* AirportDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailViewController.swift; sourceTree = "<group>"; };
+		0F1CE3F32738F21700EAFE92 /* AirportDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailView.swift; sourceTree = "<group>"; };
 		0F35DB942737C635002C3E5C /* TheFlightTrackerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheFlightTrackerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F35DB972737C635002C3E5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F35DB992737C635002C3E5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +88,8 @@
 		0F35DBB52737C636002C3E5C /* TheFlightTrackerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheFlightTrackerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F35DBB92737C636002C3E5C /* TheFlightTrackerAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheFlightTrackerAppUITests.swift; sourceTree = "<group>"; };
 		0F35DBBB2737C636002C3E5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FDED82D273901DA007C6FA0 /* AirportDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailsModel.swift; sourceTree = "<group>"; };
+		0FDED82F27390B0D007C6FA0 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +130,7 @@
 		0F1CE3632737CC9D00EAFE92 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				0F1CE3F02738F1ED00EAFE92 /* AirportDetail */,
 				0F1CE3752737F62600EAFE92 /* Airports */,
 				0F1CE3672737D01D00EAFE92 /* Root */,
 			);
@@ -141,6 +150,7 @@
 			children = (
 				0F1CE36F2737E29500EAFE92 /* UIImage+Extension.swift */,
 				0F1CE3A52738084A00EAFE92 /* UIView+Extensions.swift */,
+				0FDED82F27390B0D007C6FA0 /* UILabel+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -148,6 +158,7 @@
 		0F1CE3712737E34800EAFE92 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				0F1CE3ED2738EAD900EAFE92 /* Spinner */,
 				0F1CE36E2737E24500EAFE92 /* Extensions */,
 			);
 			path = Common;
@@ -188,8 +199,25 @@
 			isa = PBXGroup;
 			children = (
 				0F1CE3EB27382AF700EAFE92 /* AirportsModel.swift */,
+				0FDED82D273901DA007C6FA0 /* AirportDetailsModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		0F1CE3ED2738EAD900EAFE92 /* Spinner */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Spinner;
+			sourceTree = "<group>";
+		};
+		0F1CE3F02738F1ED00EAFE92 /* AirportDetail */ = {
+			isa = PBXGroup;
+			children = (
+				0F1CE3F12738F20000EAFE92 /* AirportDetailViewController.swift */,
+				0F1CE3F32738F21700EAFE92 /* AirportDetailView.swift */,
+			);
+			path = AirportDetail;
 			sourceTree = "<group>";
 		};
 		0F35DB8B2737C635002C3E5C = {
@@ -382,13 +410,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F1CE3792737F64200EAFE92 /* AirportsViewModel.swift in Sources */,
+				0F1CE3F42738F21700EAFE92 /* AirportDetailView.swift in Sources */,
 				0F35DB982737C635002C3E5C /* AppDelegate.swift in Sources */,
 				0F1CE3E927382AAC00EAFE92 /* URLSession+Protocol.swift in Sources */,
+				0FDED82E273901DA007C6FA0 /* AirportDetailsModel.swift in Sources */,
 				0F1CE3E42738274B00EAFE92 /* URLSessionProtocol.swift in Sources */,
 				0F35DB9A2737C635002C3E5C /* SceneDelegate.swift in Sources */,
 				0F1CE37B2737F65600EAFE92 /* AirportsViewController.swift in Sources */,
+				0FDED83027390B0D007C6FA0 /* UILabel+Extension.swift in Sources */,
 				0F1CE3EC27382AF700EAFE92 /* AirportsModel.swift in Sources */,
 				0F1CE3772737F63800EAFE92 /* AirportsView.swift in Sources */,
+				0F1CE3F22738F20000EAFE92 /* AirportDetailViewController.swift in Sources */,
 				0F1CE36D2737D11C00EAFE92 /* TabbarController.swift in Sources */,
 				0F1CE3A62738084A00EAFE92 /* UIView+Extensions.swift in Sources */,
 				0F1CE3702737E29500EAFE92 /* UIImage+Extension.swift in Sources */,

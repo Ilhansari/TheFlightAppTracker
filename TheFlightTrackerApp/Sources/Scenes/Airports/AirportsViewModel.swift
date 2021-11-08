@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol AirportsViewDelegate: AnyObject {
+protocol AirportsViewModelDelegate: AnyObject {
     func handleData(airportsModel: [AirportsModel])
 }
 
@@ -16,7 +16,7 @@ final class AirportsViewModel {
     // MARK: - Properties
     private var airportsModel = [AirportsModel]()
 
-    weak var delegate: AirportsViewDelegate?
+    weak var delegate: AirportsViewModelDelegate?
 
     func getAirportsData() {
         let airportsService = NetworkService<AirportsModel>(.airports)

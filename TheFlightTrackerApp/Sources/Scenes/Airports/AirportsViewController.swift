@@ -24,12 +24,26 @@ final class AirportsViewController: UIViewController {
         viewSource.startMapping()
         viewModel.getAirportsData()
         viewModel.delegate = self
+        viewSource.delegate = self
     }
 }
 
-// MARK: - AirportsViewDelegate
-extension AirportsViewController: AirportsViewDelegate {
+// MARK: - AirportsViewModelDelegate
+extension AirportsViewController: AirportsViewModelDelegate {
+    
     func handleData(airportsModel: [AirportsModel]) {
-        self.viewSource.populateAnnotations(airportsModel)
+        self.viewSource.airportModels = airportsModel
+        self.viewSource.populateAnnotations()
+        self.viewSource.foundAirportsFurthestApart()
+    }
+}
+
+// MARK: AirportsViewDelegate
+extension AirportsViewController: AirportsViewDelegate {
+
+    func didTapDisclosureButton(model: AirportDetailsModel) {
+        let airportDetailsViewController = AirportDetailViewController(airportDetails: model)
+        airportDetailsViewController.modalPresentationStyle = .pageSheet
+        present(airportDetailsViewController, animated: true, completion: nil)
     }
 }

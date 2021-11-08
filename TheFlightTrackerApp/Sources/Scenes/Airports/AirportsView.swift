@@ -9,6 +9,10 @@ import UIKit
 import MapKit
 import CoreLocation
 
+protocol AirportsViewDelegate: AnyObject {
+    func didTapDisclosureButton(model: AirportDetailsModel)
+}
+
 final class AirportsView: UIView {
 
     private enum Constants {
@@ -23,12 +27,17 @@ final class AirportsView: UIView {
 
     private var annotationView: MKAnnotationView?
 
+    var airportModels = [AirportsModel]()
+    private var furthestAirports = [AirportsModel]()
+
+    weak var delegate: AirportsViewDelegate?
+
     private lazy var detailDisclosureButton: UIButton = {
         let button = UIButton(type: .detailDisclosure)
         button.tintColor = .blue
         return button
     }()
-
+    
     // MARK: - Initialization
     init() {
         super.init(frame: .zero)
@@ -114,13 +123,21 @@ extension AirportsView: MKMapViewDelegate {
         setAnnotationImage(for: annotation)
         return annotationView
     }
+
+    func mapView(_ mapView: MKMapView,
+                 annotationView view: MKAnnotationView,
+                 calloutAccessoryControlTapped control: UIControl) {
+
+        guard let airportDetails = detailDisclosureTapped(on: view) else { return }
+        self.delegate?.didTapDisclosureButton(model: airportDetails)
+    }
 }
 
 // MARK: - Set Annotation
 extension AirportsView {
 
-    func populateAnnotations(_ airports: [AirportsModel]) {
-        for airport in airports {
+    func populateAnnotations() {
+        for airport in airportModels {
             let annotation = MKPointAnnotation()
             annotation.title = airport.name
             annotation.coordinate = CLLocationCoordinate2D(latitude: airport.latitude,
@@ -143,6 +160,64 @@ extension AirportsView {
     }
 
     private func setAnnotationImage(for annotation: MKAnnotation) {
-        annotationView?.image = .flightAnnotation
+        if furthestAirports[0].name == annotation.title
+            || furthestAirports[1].name == annotation.title {
+            annotationView?.image = .goldFlightAnnotation
+        } else {
+            annotationView?.image = .flightAnnotation
+        }
+    }
+}
+
+extension AirportsView {
+
+    func detailDisclosureTapped(on view: MKAnnotationView) -> AirportDetailsModel? {
+        var airportsDistance: Double = 100000
+        var nearestAirport: AirportsModel?
+
+        for firstAirport in airportModels {
+            if firstAirport.name == view.annotation?.title {
+
+                for secondAirport in airportModels {
+                    let distance = firstAirport.distance(true, to: secondAirport.location)
+
+                    if distance < airportsDistance && firstAirport.id != secondAirport.id {
+                        airportsDistance = distance
+                        nearestAirport = secondAirport
+                    }
+                }
+
+                let airportDetails = AirportDetailsModel(airport: firstAirport,
+                                                         nearestAirport: nearestAirport?.name ?? "",
+                                                         airportsDistance: airportsDistance)
+
+                return airportDetails
+            }
+        }
+        return nil
+    }
+
+    func foundAirportsFurthestApart() {
+      var distance: CLLocationDistance = .zero
+      let x = airportModels.reversed()
+      var y = airportModels
+
+      for a in x {
+        for b in y {
+
+          let d = a.distance(true, to: b.location)
+
+          if d > distance {
+            distance = d
+            furthestAirports = []
+            furthestAirports.append(a)
+            furthestAirports.append(b)
+
+            if let index = y.firstIndex(of: b) {
+              y.remove(at: index)
+            }
+          }
+        }
+      }
     }
 }
