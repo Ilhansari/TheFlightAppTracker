@@ -9,6 +9,11 @@ import Foundation
 
 struct NetworkService<Resource> where Resource: Codable {
 
+    enum Error: Swift.Error {
+        case connectivity
+        case invalidData
+    }
+
     var resourceURL: NetworkEndpoint
 
     var session: URLSessionProtocol
@@ -31,11 +36,11 @@ extension NetworkService {
 
     let dataTask = session.dataTask(with: resourceURL.url) { data, response, error in
       guard let httpResponse = response as? HTTPURLResponse else {
-        return completion(.failure(NSError()))
+        return completion(.failure(.invalidData))
       }
       guard httpResponse.statusCode == OK_200,
             let jsonData = data else {
-        return completion(.failure(NSError()))
+        return completion(.failure(.invalidData))
       }
       do {
         let resources = try JSONDecoder().decode([Resource].self,
@@ -43,7 +48,7 @@ extension NetworkService {
         completion(.success(resources))
       }
       catch {
-        completion(.failure(NSError()))
+        completion(.failure(.connectivity))
       }
     }
     dataTask.resume()
