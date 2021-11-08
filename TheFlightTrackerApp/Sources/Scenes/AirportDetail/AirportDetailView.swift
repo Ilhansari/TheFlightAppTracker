@@ -24,6 +24,8 @@ final class AirportDetailView: UIView {
     private lazy var nearestAirportLabel: UILabel = .create()
     private lazy var distanceAirportLabel: UILabel = .create()
 
+    var isInKm = UserDefaultsService.shared.isInKm
+
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [
             titleLabel,
@@ -82,7 +84,8 @@ extension AirportDetailView {
         cityLabel.text = "CITY: \(model.airport.city)"
         countyIdLabel.text = "COUNTRY ID: \(model.airport.countryId)"
         nearestAirportLabel.text = "NEAREST AIRPORT: \(model.nearestAirport)"
-        let airportDistance = String(format: distanceFormat, model.airportsDistance, "km")
+        let unit = isInKm ? "km" : "mi"
+        let airportDistance = String(format: distanceFormat, model.airportsDistance, unit)
         distanceAirportLabel.text = "DISTANCE AIRPORT: \(airportDistance)"
     }
 }

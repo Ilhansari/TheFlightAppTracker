@@ -26,6 +26,12 @@ final class AirportsViewController: UIViewController {
         viewModel.delegate = self
         viewSource.delegate = self
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        viewSource.checkDistanceUnitSettings()
+    }
 }
 
 // MARK: - AirportsViewModelDelegate

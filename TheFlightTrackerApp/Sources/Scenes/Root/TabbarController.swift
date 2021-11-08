@@ -71,17 +71,3 @@ private extension TabbarController {
         return navigationController
     }
 }
-
-class FlightsViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .blue
-    }
-}
-
-class SettingsViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .orange
-    }
-}

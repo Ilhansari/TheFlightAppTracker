@@ -29,6 +29,17 @@
 		0F35DBBA2737C636002C3E5C /* TheFlightTrackerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35DBB92737C636002C3E5C /* TheFlightTrackerAppUITests.swift */; };
 		0FDED82E273901DA007C6FA0 /* AirportDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED82D273901DA007C6FA0 /* AirportDetailsModel.swift */; };
 		0FDED83027390B0D007C6FA0 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED82F27390B0D007C6FA0 /* UILabel+Extension.swift */; };
+		0FDED83627391B7D007C6FA0 /* FlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED83527391B7D007C6FA0 /* FlightsViewController.swift */; };
+		0FDED83827391B89007C6FA0 /* FlightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED83727391B89007C6FA0 /* FlightsView.swift */; };
+		0FDED83A27391BCB007C6FA0 /* FlightsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED83927391BCB007C6FA0 /* FlightsViewModel.swift */; };
+		0FDED83D27391CDD007C6FA0 /* FlightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED83C27391CDD007C6FA0 /* FlightCell.swift */; };
+		0FDED83F27391EA6007C6FA0 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED83E27391EA6007C6FA0 /* NSObject+Extensions.swift */; };
+		0FDED841273922AA007C6FA0 /* FlightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED840273922AA007C6FA0 /* FlightModel.swift */; };
+		0FDED84427393B98007C6FA0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED84327393B98007C6FA0 /* SettingsView.swift */; };
+		0FDED84627393BA3007C6FA0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED84527393BA3007C6FA0 /* SettingsViewController.swift */; };
+		0FDED84827393C68007C6FA0 /* UserDefaultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED84727393C68007C6FA0 /* UserDefaultService.swift */; };
+		0FDED84B27393CF9007C6FA0 /* UserDefaultsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED84A27393CF9007C6FA0 /* UserDefaultsContainer.swift */; };
+		0FDED84D27393D15007C6FA0 /* UserDefaultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED84C27393D15007C6FA0 /* UserDefaultProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +101,17 @@
 		0F35DBBB2737C636002C3E5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FDED82D273901DA007C6FA0 /* AirportDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailsModel.swift; sourceTree = "<group>"; };
 		0FDED82F27390B0D007C6FA0 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		0FDED83527391B7D007C6FA0 /* FlightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsViewController.swift; sourceTree = "<group>"; };
+		0FDED83727391B89007C6FA0 /* FlightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsView.swift; sourceTree = "<group>"; };
+		0FDED83927391BCB007C6FA0 /* FlightsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsViewModel.swift; sourceTree = "<group>"; };
+		0FDED83C27391CDD007C6FA0 /* FlightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightCell.swift; sourceTree = "<group>"; };
+		0FDED83E27391EA6007C6FA0 /* NSObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
+		0FDED840273922AA007C6FA0 /* FlightModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightModel.swift; sourceTree = "<group>"; };
+		0FDED84327393B98007C6FA0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		0FDED84527393BA3007C6FA0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		0FDED84727393C68007C6FA0 /* UserDefaultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultService.swift; sourceTree = "<group>"; };
+		0FDED84A27393CF9007C6FA0 /* UserDefaultsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsContainer.swift; sourceTree = "<group>"; };
+		0FDED84C27393D15007C6FA0 /* UserDefaultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +152,8 @@
 		0F1CE3632737CC9D00EAFE92 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				0FDED84227393B85007C6FA0 /* Settings */,
+				0FDED83427391B6E007C6FA0 /* Flights */,
 				0F1CE3F02738F1ED00EAFE92 /* AirportDetail */,
 				0F1CE3752737F62600EAFE92 /* Airports */,
 				0F1CE3672737D01D00EAFE92 /* Root */,
@@ -151,6 +175,7 @@
 				0F1CE36F2737E29500EAFE92 /* UIImage+Extension.swift */,
 				0F1CE3A52738084A00EAFE92 /* UIView+Extensions.swift */,
 				0FDED82F27390B0D007C6FA0 /* UILabel+Extension.swift */,
+				0FDED83E27391EA6007C6FA0 /* NSObject+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -177,7 +202,8 @@
 		0F1CE3DE273823F300EAFE92 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				0F1CE3E52738277300EAFE92 /* Service */,
+				0FDED84927393CC6007C6FA0 /* UserDefaults */,
+				0F1CE3E52738277300EAFE92 /* Services */,
 				0F1CE3EA27382AEE00EAFE92 /* Models */,
 				0F1CE3DF2738267F00EAFE92 /* NetworkEndPoint.swift */,
 				0F1CE3E1273826CD00EAFE92 /* Result.swift */,
@@ -186,13 +212,13 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		0F1CE3E52738277300EAFE92 /* Service */ = {
+		0F1CE3E52738277300EAFE92 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				0F1CE3E62738278300EAFE92 /* NetworkService.swift */,
 				0F1CE3E827382AAC00EAFE92 /* URLSession+Protocol.swift */,
 			);
-			path = Service;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		0F1CE3EA27382AEE00EAFE92 /* Models */ = {
@@ -200,6 +226,7 @@
 			children = (
 				0F1CE3EB27382AF700EAFE92 /* AirportsModel.swift */,
 				0FDED82D273901DA007C6FA0 /* AirportDetailsModel.swift */,
+				0FDED840273922AA007C6FA0 /* FlightModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -277,6 +304,44 @@
 				0F35DBA02737C636002C3E5C /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0FDED83427391B6E007C6FA0 /* Flights */ = {
+			isa = PBXGroup;
+			children = (
+				0FDED83527391B7D007C6FA0 /* FlightsViewController.swift */,
+				0FDED83727391B89007C6FA0 /* FlightsView.swift */,
+				0FDED83927391BCB007C6FA0 /* FlightsViewModel.swift */,
+				0FDED83B27391C30007C6FA0 /* Cell */,
+			);
+			path = Flights;
+			sourceTree = "<group>";
+		};
+		0FDED83B27391C30007C6FA0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0FDED83C27391CDD007C6FA0 /* FlightCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		0FDED84227393B85007C6FA0 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				0FDED84327393B98007C6FA0 /* SettingsView.swift */,
+				0FDED84527393BA3007C6FA0 /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		0FDED84927393CC6007C6FA0 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				0FDED84727393C68007C6FA0 /* UserDefaultService.swift */,
+				0FDED84A27393CF9007C6FA0 /* UserDefaultsContainer.swift */,
+				0FDED84C27393D15007C6FA0 /* UserDefaultProtocol.swift */,
+			);
+			path = UserDefaults;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,23 +474,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FDED83827391B89007C6FA0 /* FlightsView.swift in Sources */,
 				0F1CE3792737F64200EAFE92 /* AirportsViewModel.swift in Sources */,
 				0F1CE3F42738F21700EAFE92 /* AirportDetailView.swift in Sources */,
+				0FDED841273922AA007C6FA0 /* FlightModel.swift in Sources */,
 				0F35DB982737C635002C3E5C /* AppDelegate.swift in Sources */,
+				0FDED83F27391EA6007C6FA0 /* NSObject+Extensions.swift in Sources */,
 				0F1CE3E927382AAC00EAFE92 /* URLSession+Protocol.swift in Sources */,
+				0FDED84D27393D15007C6FA0 /* UserDefaultProtocol.swift in Sources */,
 				0FDED82E273901DA007C6FA0 /* AirportDetailsModel.swift in Sources */,
 				0F1CE3E42738274B00EAFE92 /* URLSessionProtocol.swift in Sources */,
 				0F35DB9A2737C635002C3E5C /* SceneDelegate.swift in Sources */,
 				0F1CE37B2737F65600EAFE92 /* AirportsViewController.swift in Sources */,
 				0FDED83027390B0D007C6FA0 /* UILabel+Extension.swift in Sources */,
 				0F1CE3EC27382AF700EAFE92 /* AirportsModel.swift in Sources */,
+				0FDED83D27391CDD007C6FA0 /* FlightCell.swift in Sources */,
 				0F1CE3772737F63800EAFE92 /* AirportsView.swift in Sources */,
+				0FDED84427393B98007C6FA0 /* SettingsView.swift in Sources */,
+				0FDED83A27391BCB007C6FA0 /* FlightsViewModel.swift in Sources */,
 				0F1CE3F22738F20000EAFE92 /* AirportDetailViewController.swift in Sources */,
 				0F1CE36D2737D11C00EAFE92 /* TabbarController.swift in Sources */,
 				0F1CE3A62738084A00EAFE92 /* UIView+Extensions.swift in Sources */,
 				0F1CE3702737E29500EAFE92 /* UIImage+Extension.swift in Sources */,
 				0F1CE3E02738267F00EAFE92 /* NetworkEndPoint.swift in Sources */,
 				0F1CE3E72738278300EAFE92 /* NetworkService.swift in Sources */,
+				0FDED84627393BA3007C6FA0 /* SettingsViewController.swift in Sources */,
+				0FDED84B27393CF9007C6FA0 /* UserDefaultsContainer.swift in Sources */,
+				0FDED83627391B7D007C6FA0 /* FlightsViewController.swift in Sources */,
+				0FDED84827393C68007C6FA0 /* UserDefaultService.swift in Sources */,
 				0F1CE3E2273826CD00EAFE92 /* Result.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

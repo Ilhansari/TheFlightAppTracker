@@ -32,6 +32,8 @@ final class AirportsView: UIView {
 
     weak var delegate: AirportsViewDelegate?
 
+    private var isInKm = UserDefaultsService.shared.isInKm
+
     private lazy var detailDisclosureButton: UIButton = {
         let button = UIButton(type: .detailDisclosure)
         button.tintColor = .blue
@@ -66,6 +68,10 @@ final class AirportsView: UIView {
         locationManager.requestLocation()
         locationManager.startUpdatingLocation()
         locationManager.allowsBackgroundLocationUpdates = false
+    }
+
+    func checkDistanceUnitSettings() {
+      isInKm = UserDefaultsService.shared.isInKm
     }
 }
 
@@ -127,6 +133,7 @@ extension AirportsView: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView,
                  annotationView view: MKAnnotationView,
                  calloutAccessoryControlTapped control: UIControl) {
+        checkDistanceUnitSettings()
 
         guard let airportDetails = detailDisclosureTapped(on: view) else { return }
         self.delegate?.didTapDisclosureButton(model: airportDetails)
@@ -179,7 +186,7 @@ extension AirportsView {
             if firstAirport.name == view.annotation?.title {
 
                 for secondAirport in airportModels {
-                    let distance = firstAirport.distance(true, to: secondAirport.location)
+                    let distance = firstAirport.distance(isInKm, to: secondAirport.location)
 
                     if distance < airportsDistance && firstAirport.id != secondAirport.id {
                         airportsDistance = distance
@@ -205,7 +212,7 @@ extension AirportsView {
       for a in x {
         for b in y {
 
-          let d = a.distance(true, to: b.location)
+          let d = a.distance(isInKm, to: b.location)
 
           if d > distance {
             distance = d

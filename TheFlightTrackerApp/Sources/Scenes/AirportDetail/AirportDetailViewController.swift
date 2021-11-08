@@ -32,4 +32,9 @@ final class AirportDetailViewController: UIViewController {
         view = viewSource
         viewSource.populateUI(model: airportDetails)
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewSource.isInKm = UserDefaultsService.shared.isInKm
+    }
 }
