@@ -12,7 +12,7 @@ extension UILabel {
     static func create(text: String = "",
                        numberOfLines: Int = 0,
                        font: UIFont = .systemFont(ofSize: 16.0, weight: .semibold),
-                       textColor: UIColor = .white,
+                       textColor: UIColor = .appColor,
                        textAlignment: NSTextAlignment = .left) -> UILabel {
         
         let label = UILabel()

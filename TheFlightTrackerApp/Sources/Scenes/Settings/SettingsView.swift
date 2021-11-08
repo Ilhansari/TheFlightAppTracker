@@ -18,7 +18,7 @@ final class SettingsView: UIView {
     }()
     
     private lazy var sectionLabel: UILabel = .create(text: "Unit",
-                                                     textColor: .white,
+                                                     textColor: .appColor,
                                                      textAlignment: .center)
     
     private lazy var stackView: UIStackView = {
@@ -45,7 +45,7 @@ final class SettingsView: UIView {
 private extension SettingsView {
     
     func arrangeViews() {
-        backgroundColor = .lightGray
+        backgroundColor = .appBackgroundColor
         
         addSubview(stackView)
         stackView.anchor(top: safeAreaLayoutGuide.topAnchor,

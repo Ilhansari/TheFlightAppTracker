@@ -10,7 +10,7 @@ import UIKit
 final class FlightCell: UITableViewCell {
 
     // MARK: - Properties
-    private lazy var nameLabel: UILabel = .create(textColor: .black)
+    private lazy var nameLabel: UILabel = .create(textColor: .appColor)
     
     private lazy var distanceLabel: UILabel = .create(textColor: .systemIndigo)
     

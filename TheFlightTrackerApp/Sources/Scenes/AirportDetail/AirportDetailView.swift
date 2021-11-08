@@ -72,7 +72,8 @@ final class AirportDetailView: UIView {
 private extension AirportDetailView {
     
     func arrangeViews() {
-        backgroundColor = .black
+        backgroundColor = .appBackgroundColor
+        
         addSubview(stackView)
         stackView.anchor(top: safeAreaLayoutGuide.topAnchor,
                          leading: leadingAnchor,

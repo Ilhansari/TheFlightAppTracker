@@ -26,6 +26,7 @@
 		0F35DBA42737C636002C3E5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F35DBA22737C636002C3E5C /* LaunchScreen.storyboard */; };
 		0F35DBAF2737C636002C3E5C /* TheFlightTrackerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35DBAE2737C636002C3E5C /* TheFlightTrackerAppTests.swift */; };
 		0F35DBBA2737C636002C3E5C /* TheFlightTrackerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35DBB92737C636002C3E5C /* TheFlightTrackerAppUITests.swift */; };
+		0F3F54A22739ABDF005935E8 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3F54A12739ABDF005935E8 /* UIColor+Extensions.swift */; };
 		0FDED82E273901DA007C6FA0 /* AirportDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED82D273901DA007C6FA0 /* AirportDetailsModel.swift */; };
 		0FDED83027390B0D007C6FA0 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED82F27390B0D007C6FA0 /* UILabel+Extension.swift */; };
 		0FDED83627391B7D007C6FA0 /* FlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED83527391B7D007C6FA0 /* FlightsViewController.swift */; };
@@ -98,6 +99,7 @@
 		0F35DBB52737C636002C3E5C /* TheFlightTrackerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheFlightTrackerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F35DBB92737C636002C3E5C /* TheFlightTrackerAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheFlightTrackerAppUITests.swift; sourceTree = "<group>"; };
 		0F35DBBB2737C636002C3E5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F3F54A12739ABDF005935E8 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		0FDED82D273901DA007C6FA0 /* AirportDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailsModel.swift; sourceTree = "<group>"; };
 		0FDED82F27390B0D007C6FA0 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		0FDED83527391B7D007C6FA0 /* FlightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				0FDED82F27390B0D007C6FA0 /* UILabel+Extension.swift */,
 				0FDED83E27391EA6007C6FA0 /* NSObject+Extensions.swift */,
 				0FDED84F273962A3007C6FA0 /* UIViewController+Extension.swift */,
+				0F3F54A12739ABDF005935E8 /* UIColor+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FDED83827391B89007C6FA0 /* FlightsView.swift in Sources */,
+				0F3F54A22739ABDF005935E8 /* UIColor+Extensions.swift in Sources */,
 				0F1CE3792737F64200EAFE92 /* AirportsViewModel.swift in Sources */,
 				0F1CE3F42738F21700EAFE92 /* AirportDetailView.swift in Sources */,
 				0FDED841273922AA007C6FA0 /* FlightModel.swift in Sources */,

@@ -11,7 +11,7 @@ var vSpinner: UIView?
 
 extension UIViewController {
     
-    func showSpinner(onView : UIView) {
+    func showSpinner(onView: UIView) {
         
         let spinnerView = UIView.init(frame: onView.bounds)
         let activityIndicator = UIActivityIndicatorView.init(style: .large)
