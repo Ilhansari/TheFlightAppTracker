@@ -230,10 +230,10 @@
 		0F1CE3E52738277300EAFE92 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				0F1CE3E32738274B00EAFE92 /* URLSessionProtocol.swift */,
 				0F1CE3DF2738267F00EAFE92 /* NetworkEndPoint.swift */,
 				0F1CE3E62738278300EAFE92 /* NetworkService.swift */,
 				0F1CE3E827382AAC00EAFE92 /* URLSession+Protocol.swift */,
+				0F1CE3E32738274B00EAFE92 /* URLSessionProtocol.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -241,8 +241,8 @@
 		0F1CE3EA27382AEE00EAFE92 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0F1CE3EB27382AF700EAFE92 /* AirportsModel.swift */,
 				0FDED82D273901DA007C6FA0 /* AirportDetailsModel.swift */,
+				0F1CE3EB27382AF700EAFE92 /* AirportsModel.swift */,
 				0FDED840273922AA007C6FA0 /* FlightModel.swift */,
 			);
 			path = Models;
@@ -311,9 +311,9 @@
 		0F35DBC82737CAF7002C3E5C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0F35DBA02737C636002C3E5C /* Assets.xcassets */,
 				0F35DBA52737C636002C3E5C /* Info.plist */,
 				0F35DBA22737C636002C3E5C /* LaunchScreen.storyboard */,
-				0F35DBA02737C636002C3E5C /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
