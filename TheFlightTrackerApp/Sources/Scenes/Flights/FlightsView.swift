@@ -8,13 +8,15 @@
 import UIKit
 
 final class FlightsView: UIView {
-    
+
+    // MARK: - Properties
     private(set) lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(FlightCell.self, forCellReuseIdentifier: FlightCell.identifier)
         return tableView
     }()
-    
+
+    // MARK: - Initialization
     init() {
         super.init(frame: .zero)
         

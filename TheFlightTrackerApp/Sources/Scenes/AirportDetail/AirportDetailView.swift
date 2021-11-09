@@ -56,7 +56,8 @@ final class AirportDetailView: UIView {
         stackView.spacing = 20.0
         return stackView
     }()
-    
+
+    // MARK: - Initialization
     init() {
         super.init(frame: .zero)
         
