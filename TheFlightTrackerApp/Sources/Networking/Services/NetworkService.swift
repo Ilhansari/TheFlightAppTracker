@@ -30,28 +30,25 @@ struct NetworkService<Resource> where Resource: Codable {
 }
 
 extension NetworkService {
-  /// Get request with an array as a response.
-  ///
-  func getData(_ completion: @escaping (Result<[Resource], Error>) -> Void) {
 
-    let dataTask = session.dataTask(with: resourceURL.url) { data, response, error in
-      guard let httpResponse = response as? HTTPURLResponse else {
-        return completion(.failure(.invalidData))
-      }
-      guard httpResponse.statusCode == OK_200,
-            let jsonData = data else {
-        return completion(.failure(.invalidData))
-      }
-      do {
-        let resources = try JSONDecoder().decode([Resource].self,
-                                                 from: jsonData)
-        completion(.success(resources))
-      }
-      catch {
-        completion(.failure(.connectivity))
-      }
+    func getData(_ completion: @escaping (Result<[Resource], Error>) -> Void) {
+
+        let dataTask = session.dataTask(with: resourceURL.url) { data, response, error in
+            guard let response = response as? HTTPURLResponse else {
+                return completion(.failure(.invalidData))
+            }
+            return completion(map(data, from: response))
+        }
+        dataTask.resume()
     }
-    dataTask.resume()
-  }
+
+    private func map(_ data: Data?, from response: HTTPURLResponse) -> Result<[Resource], Error> {
+        guard response.statusCode == OK_200,
+              let data = data,
+              let resources = try? JSONDecoder().decode([Resource].self, from: data) else {
+            return .failure(.invalidData)
+        }
+        return .success(resources)
+    }
 }
 

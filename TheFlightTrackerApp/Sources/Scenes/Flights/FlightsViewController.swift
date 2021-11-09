@@ -8,12 +8,11 @@
 import UIKit
 
 final class FlightsViewController: UIViewController {
-    
+
+    // MARK: - Properties
     private lazy var viewModel = FlightsViewModel()
     private lazy var viewSource = FlightsView()
-    
-    private var airportsCount: Int?
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,7 +33,7 @@ final class FlightsViewController: UIViewController {
 extension FlightsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.countAirports()
+        return viewModel.airportsConnectedCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

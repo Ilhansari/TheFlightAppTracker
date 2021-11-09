@@ -5,7 +5,6 @@
 //  Created by Ilhan Sari on 8.11.2021.
 //
 
-import Foundation
 import CoreLocation
 
 protocol FlightsViewModelDelegate: AnyObject {
@@ -22,7 +21,8 @@ final class FlightsViewModel {
 
         static let schipholLocation: CLLocation = CLLocation(latitude: 52.30907, longitude: 4.763385)
     }
-    
+
+    // MARK: - Properties
     var flightsModel = [FlightModel]()
     var flightsConnectedModel =  [FlightModel]()
     var airportsModel = [AirportsModel]()
@@ -32,30 +32,57 @@ final class FlightsViewModel {
     var trackIsKm = !UserDefaultsService.shared.isKm
     
     weak var delegate: FlightsViewModelDelegate?
-    
-    
+
+    var airportsConnectedCount: Int {
+        return airportsConnectedModel.count
+    }
+
+    // MARK: - Initialization
     init() {
         getFlightsData()
     }
-    
-    private func getFlightsData() {
+
+    private func populateAirports() {
+        filterFlightsFromSchiphol()
+        filterAirportsConnectedToSchiphol()
+        sortConnectedAirports()
+    }
+
+    func checkDistanceUnitSettings() {
+        isKm = UserDefaultsService.shared.isKm
+        if trackIsKm == isKm {
+            getFlightsData()
+            trackIsKm = !UserDefaultsService.shared.isKm
+        }
+    }
+
+    func distanceFromSchiphol(to airport: AirportsModel) -> String {
+        let distance = airport.distance(isKm, to: Constants.schipholLocation)
+        let unit = isKm ? "km" : "mi"
+        let airportDistance = String(format: Constants.distanceFormatString, distance, unit)
+        return airportDistance
+    }
+
+}
+
+// MARK: - Networking
+private extension FlightsViewModel {
+
+    func getFlightsData() {
         let flightService = NetworkService<FlightModel>(.flights)
-        self.delegate?.handleLoading(isLoading: true)
         flightService.getData { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let response):
                 self.flightsModel = response
                 self.getAirportsData()
-                self.delegate?.handleLoading(isLoading: false)
             case .failure(let error):
                 self.delegate?.handleShowAlert(message: error.localizedDescription)
-                self.delegate?.handleLoading(isLoading: false)
             }
         }
     }
-    
-    private func getAirportsData() {
+
+    func getAirportsData() {
         let airportsService = NetworkService<AirportsModel>(.airports)
         self.delegate?.handleLoading(isLoading: true)
         airportsService.getData { [weak self] result in
@@ -72,58 +99,38 @@ final class FlightsViewModel {
             }
         }
     }
-    
-    func countAirports() -> Int {
-        return airportsConnectedModel.count
-    }
-    
-    func checkDistanceUnitSettings() {
-        isKm = UserDefaultsService.shared.isKm
-        if trackIsKm == isKm {
-            getFlightsData()
-            isKm = !UserDefaultsService.shared.isKm
-        }
-    }
-    
-    private func populateAirports() {
-        filterFlightsFromSchiphol()
-        filterAirportsConnectedToSchiphol()
-        sortConnectedAirports()
-    }
-    
-    func distanceFromSchiphol(to airport: AirportsModel) -> String {
-        let distance = airport.distance(isKm, to: Constants.schipholLocation)
-        let unit = isKm ? "km" : "mi"
-        let airportDistance = String(format: Constants.distanceFormatString, distance, unit)
-        return airportDistance
-    }
-    
-    private func filterFlightsFromSchiphol() {
+}
+
+
+// MARK: - Filter Airports/Flights Distance From Schiphol Location
+extension FlightsViewModel {
+
+    func filterFlightsFromSchiphol() {
         let _ = flightsModel
             .filter { $0.departureAirportId == Constants.schipholAirportID }
             .map { flightsFilterConnected($0) }
     }
-    
-    private func filterAirportsConnectedToSchiphol() {
+
+    func filterAirportsConnectedToSchiphol() {
         let _ = airportsModel.compactMap { airportsFilterConnected($0) }
     }
-    
-    private func sortConnectedAirports() {
+
+    func sortConnectedAirports() {
         airportsConnectedModel
             .sort {
                 $0.distance(isKm, to: Constants.schipholLocation)
                     < $1.distance(isKm, to: Constants.schipholLocation)
             }
     }
-    
-    private func flightsFilterConnected(_ flight: FlightModel) {
+
+    func flightsFilterConnected(_ flight: FlightModel) {
         if !flightsConnectedModel.contains(
             where: { $0.arrivalAirportId == flight.arrivalAirportId }) {
             flightsConnectedModel.append(flight)
         }
     }
-    
-    private func airportsFilterConnected(_ airport: AirportsModel) {
+
+    func airportsFilterConnected(_ airport: AirportsModel) {
         for flight in flightsConnectedModel {
             if flight.arrivalAirportId == airport.id {
                 if !airportsConnectedModel.contains(where: { $0.id == airport.id }) {
