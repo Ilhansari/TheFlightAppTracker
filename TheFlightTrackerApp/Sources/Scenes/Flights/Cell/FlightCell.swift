@@ -8,12 +8,12 @@
 import UIKit
 
 final class FlightCell: UITableViewCell {
-
+    
     // MARK: - Properties
     private lazy var nameLabel: UILabel = .create(textColor: .appColor)
     
     private lazy var distanceLabel: UILabel = .create(textColor: .systemIndigo)
-
+    
     static let identifier = "FlightCell"
     
     private lazy var stackView: UIStackView = {
@@ -28,7 +28,7 @@ final class FlightCell: UITableViewCell {
         stackView.isLayoutMarginsRelativeArrangement = true
         return stackView
     }()
-
+    
     // MARK: - Initialization
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -46,7 +46,7 @@ private extension FlightCell {
     
     func arrangeViews() {
         addSubview(stackView)
-
+        
         NSLayoutConstraint.activate([
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
             stackView.topAnchor.constraint(equalTo: topAnchor),

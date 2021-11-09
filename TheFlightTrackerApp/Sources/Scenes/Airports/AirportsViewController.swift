@@ -37,14 +37,14 @@ final class AirportsViewController: UIViewController {
 
 // MARK: - AirportsViewModelDelegate
 extension AirportsViewController: AirportsViewModelDelegate {
-
+    
     func handleShowAlert(message: String) {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             self.showAlert(title: "Error !", message: message)
         }
     }
-
+    
     func handleLoading(isLoading: Bool) {
         DispatchQueue.main.async {
             isLoading ? self.showSpinner(onView: self.view) : self.removeSpinner()

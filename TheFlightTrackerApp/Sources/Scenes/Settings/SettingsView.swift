@@ -47,8 +47,8 @@ final class SettingsView: UIView {
 private extension SettingsView {
     func arrangeViews() {
         backgroundColor = .appBackgroundColor
+
         addSubview(stackView)
-  
         NSLayoutConstraint.activate([
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
             stackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),

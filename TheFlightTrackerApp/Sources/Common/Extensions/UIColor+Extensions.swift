@@ -8,7 +8,6 @@
 import UIKit
 
 extension UIColor {
-
     static let appColor = UIColor(named: "appColor")!
     static let appBackgroundColor = UIColor(named: "appBackgroundColor")!
     static let indigoColor = UIColor(named: "indigoColor")!

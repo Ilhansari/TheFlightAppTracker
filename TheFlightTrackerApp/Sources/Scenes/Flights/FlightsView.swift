@@ -8,14 +8,14 @@
 import UIKit
 
 final class FlightsView: UIView {
-
+    
     // MARK: - Properties
     private(set) lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(FlightCell.self, forCellReuseIdentifier: FlightCell.identifier)
         return tableView
     }()
-
+    
     // MARK: - Initialization
     init() {
         super.init(frame: .zero)
@@ -33,7 +33,7 @@ private extension FlightsView {
     
     func arrangeViews() {
         addSubview(tableView)
-
+        
         NSLayoutConstraint.activate([
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
             tableView.topAnchor.constraint(equalTo: topAnchor),

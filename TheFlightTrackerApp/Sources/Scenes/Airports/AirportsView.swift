@@ -81,7 +81,7 @@ private extension AirportsView {
     
     func arrangeViews() {
         addSubview(mapView)
-
+        
         NSLayoutConstraint.activate([
             mapView.leadingAnchor.constraint(equalTo: leadingAnchor),
             mapView.topAnchor.constraint(equalTo: topAnchor),
@@ -209,27 +209,36 @@ extension AirportsView {
 }
 
 // MARK: - Actions
-extension AirportsView {
+private extension AirportsView {
     
     func detailDisclosureTapped(on view: MKAnnotationView) -> AirportDetailsModel? {
-        var nearestAirport: AirportsModel?
         
         for firstAirport in airportModels where firstAirport.name == view.annotation?.title {
-                
-                for secondAirport in airportModels {
-                    let distance = firstAirport.distance(isKm, to: secondAirport.location)
-                    
-                    if distance < Constants.airportsDistance && firstAirport.id != secondAirport.id {
-                        Constants.airportsDistance = distance
-                        nearestAirport = secondAirport
-                    }
-                }
-                
-                let airportDetails = AirportDetailsModel(airport: firstAirport,
-                                                         nearestAirport: nearestAirport?.name,
-                                                         airportsDistance: Constants.airportsDistance)
-                return airportDetails
-            }
+            
+            let nearestAirportName = findNearestAirportName(firstAirport: firstAirport)
+            let airportDetails = AirportDetailsModel(airport: firstAirport,
+                                                     nearestAirport: nearestAirportName,
+                                                     airportsDistance: Constants.airportsDistance)
+            return airportDetails
+        }
         return nil
+    }
+}
+
+// MARK: - Helpers
+private extension AirportsView {
+    
+    func findNearestAirportName(firstAirport: AirportsModel) -> String? {
+        var nearestAirport: AirportsModel?
+        
+        for secondAirport in airportModels {
+            let distance = firstAirport.distance(isKm, to: secondAirport.location)
+            
+            if distance < Constants.airportsDistance && firstAirport.id != secondAirport.id {
+                Constants.airportsDistance = distance
+                nearestAirport = secondAirport
+            }
+        }
+        return nearestAirport?.name
     }
 }

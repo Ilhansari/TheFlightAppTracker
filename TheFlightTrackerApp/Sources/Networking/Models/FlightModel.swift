@@ -9,9 +9,9 @@ import Foundation
 
 struct FlightModel: Codable, Equatable {
 
-  var airlineId: String
-  var flightNumber: Int
-  var departureAirportId: String
-  var arrivalAirportId: String
+    var airlineId: String
+    var flightNumber: Int
+    var departureAirportId: String
+    var arrivalAirportId: String
     
 }

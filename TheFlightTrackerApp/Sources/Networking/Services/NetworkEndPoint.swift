@@ -8,21 +8,21 @@
 import Foundation
 
 enum NetworkEndpoint {
-
-  static let baseURL = URL(string: "https://flightassets.datasavannah.com/test/")!
-
-  case airports
-  case flights
+    
+    static let baseURL = URL(string: "https://flightassets.datasavannah.com/test/")!
+    
+    case airports
+    case flights
 }
 
 extension NetworkEndpoint {
-
+    
     var url: URL {
-      switch self {
-      case .airports:
-        return NetworkEndpoint.baseURL.appendingPathComponent("airports.json")
-      case .flights:
-        return NetworkEndpoint.baseURL.appendingPathComponent("flights.json")
-      }
+        switch self {
+        case .airports:
+            return NetworkEndpoint.baseURL.appendingPathComponent("airports.json")
+        case .flights:
+            return NetworkEndpoint.baseURL.appendingPathComponent("flights.json")
+        }
     }
 }
