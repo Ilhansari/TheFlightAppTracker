@@ -42,6 +42,9 @@
 		0FDED84B27393CF9007C6FA0 /* UserDefaultsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED84A27393CF9007C6FA0 /* UserDefaultsContainer.swift */; };
 		0FDED84D27393D15007C6FA0 /* UserDefaultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED84C27393D15007C6FA0 /* UserDefaultProtocol.swift */; };
 		0FDED850273962A3007C6FA0 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED84F273962A3007C6FA0 /* UIViewController+Extension.swift */; };
+		2ADA1EDEDDF1B6DD0AE26F67 /* Pods_TheFlightTrackerApp_TheFlightTrackerAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6AC82DB0F389190FBD579B6 /* Pods_TheFlightTrackerApp_TheFlightTrackerAppUITests.framework */; };
+		2E826028E3077DF1ACD2DFF5 /* Pods_TheFlightTrackerAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 695571614A94B093156E3496 /* Pods_TheFlightTrackerAppTests.framework */; };
+		31413F2BBBB93DEF289A2D33 /* Pods_TheFlightTrackerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D6A8AA2ADE3CC016559B99 /* Pods_TheFlightTrackerApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +119,15 @@
 		0FDED84A27393CF9007C6FA0 /* UserDefaultsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsContainer.swift; sourceTree = "<group>"; };
 		0FDED84C27393D15007C6FA0 /* UserDefaultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultProtocol.swift; sourceTree = "<group>"; };
 		0FDED84F273962A3007C6FA0 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		1B5BAD77116ACF7ED59515C8 /* Pods-TheFlightTrackerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheFlightTrackerApp.debug.xcconfig"; path = "Target Support Files/Pods-TheFlightTrackerApp/Pods-TheFlightTrackerApp.debug.xcconfig"; sourceTree = "<group>"; };
+		3978035F8536C4F4643FFA8D /* Pods-TheFlightTrackerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheFlightTrackerApp.release.xcconfig"; path = "Target Support Files/Pods-TheFlightTrackerApp/Pods-TheFlightTrackerApp.release.xcconfig"; sourceTree = "<group>"; };
+		3A69A11565C7C30B2D3B7BBF /* Pods-TheFlightTrackerApp-TheFlightTrackerAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheFlightTrackerApp-TheFlightTrackerAppUITests.release.xcconfig"; path = "Target Support Files/Pods-TheFlightTrackerApp-TheFlightTrackerAppUITests/Pods-TheFlightTrackerApp-TheFlightTrackerAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5EE1BCC93D27FCC67B2CE0C1 /* Pods-TheFlightTrackerApp-TheFlightTrackerAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheFlightTrackerApp-TheFlightTrackerAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-TheFlightTrackerApp-TheFlightTrackerAppUITests/Pods-TheFlightTrackerApp-TheFlightTrackerAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		695571614A94B093156E3496 /* Pods_TheFlightTrackerAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheFlightTrackerAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97077CB6239193C3519BE090 /* Pods-TheFlightTrackerAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheFlightTrackerAppTests.debug.xcconfig"; path = "Target Support Files/Pods-TheFlightTrackerAppTests/Pods-TheFlightTrackerAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B6AC82DB0F389190FBD579B6 /* Pods_TheFlightTrackerApp_TheFlightTrackerAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheFlightTrackerApp_TheFlightTrackerAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDD415CB63CB0FBC9F529175 /* Pods-TheFlightTrackerAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheFlightTrackerAppTests.release.xcconfig"; path = "Target Support Files/Pods-TheFlightTrackerAppTests/Pods-TheFlightTrackerAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		C7D6A8AA2ADE3CC016559B99 /* Pods_TheFlightTrackerApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheFlightTrackerApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31413F2BBBB93DEF289A2D33 /* Pods_TheFlightTrackerApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E826028E3077DF1ACD2DFF5 /* Pods_TheFlightTrackerAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +151,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2ADA1EDEDDF1B6DD0AE26F67 /* Pods_TheFlightTrackerApp_TheFlightTrackerAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +266,8 @@
 				0F35DB952737C635002C3E5C /* Products */,
 				0F35DBAD2737C636002C3E5C /* TheFlightTrackerAppTests */,
 				0F35DBB82737C636002C3E5C /* TheFlightTrackerAppUITests */,
+				3A8A56414AD6F3D2D7DE75C0 /* Pods */,
+				D3687C48C550CCD9F2AECF76 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -350,6 +367,29 @@
 			path = UserDefaults;
 			sourceTree = "<group>";
 		};
+		3A8A56414AD6F3D2D7DE75C0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1B5BAD77116ACF7ED59515C8 /* Pods-TheFlightTrackerApp.debug.xcconfig */,
+				3978035F8536C4F4643FFA8D /* Pods-TheFlightTrackerApp.release.xcconfig */,
+				5EE1BCC93D27FCC67B2CE0C1 /* Pods-TheFlightTrackerApp-TheFlightTrackerAppUITests.debug.xcconfig */,
+				3A69A11565C7C30B2D3B7BBF /* Pods-TheFlightTrackerApp-TheFlightTrackerAppUITests.release.xcconfig */,
+				97077CB6239193C3519BE090 /* Pods-TheFlightTrackerAppTests.debug.xcconfig */,
+				BDD415CB63CB0FBC9F529175 /* Pods-TheFlightTrackerAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D3687C48C550CCD9F2AECF76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C7D6A8AA2ADE3CC016559B99 /* Pods_TheFlightTrackerApp.framework */,
+				B6AC82DB0F389190FBD579B6 /* Pods_TheFlightTrackerApp_TheFlightTrackerAppUITests.framework */,
+				695571614A94B093156E3496 /* Pods_TheFlightTrackerAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -357,10 +397,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F35DBBE2737C636002C3E5C /* Build configuration list for PBXNativeTarget "TheFlightTrackerApp" */;
 			buildPhases = (
+				F982325E73A42DF4AE085A48 /* [CP] Check Pods Manifest.lock */,
 				0F35DB902737C635002C3E5C /* Sources */,
 				0F35DB912737C635002C3E5C /* Frameworks */,
 				0F35DB922737C635002C3E5C /* Resources */,
 				0F1CE3C9273810E300EAFE92 /* Embed Frameworks */,
+				0FEBCC1E273A5DF0001A1D6F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -375,6 +417,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F35DBC12737C636002C3E5C /* Build configuration list for PBXNativeTarget "TheFlightTrackerAppTests" */;
 			buildPhases = (
+				45AC9C95F3D37BD02C46F9ED /* [CP] Check Pods Manifest.lock */,
 				0F35DBA62737C636002C3E5C /* Sources */,
 				0F35DBA72737C636002C3E5C /* Frameworks */,
 				0F35DBA82737C636002C3E5C /* Resources */,
@@ -393,6 +436,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F35DBC42737C636002C3E5C /* Build configuration list for PBXNativeTarget "TheFlightTrackerAppUITests" */;
 			buildPhases = (
+				63BD67CB16A2F3B1B78C0171 /* [CP] Check Pods Manifest.lock */,
 				0F35DBB12737C636002C3E5C /* Sources */,
 				0F35DBB22737C636002C3E5C /* Frameworks */,
 				0F35DBB32737C636002C3E5C /* Resources */,
@@ -474,6 +518,92 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FEBCC1E273A5DF0001A1D6F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		45AC9C95F3D37BD02C46F9ED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TheFlightTrackerAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63BD67CB16A2F3B1B78C0171 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TheFlightTrackerApp-TheFlightTrackerAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F982325E73A42DF4AE085A48 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TheFlightTrackerApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0F35DB902737C635002C3E5C /* Sources */ = {
@@ -675,6 +805,7 @@
 		};
 		0F35DBBF2737C636002C3E5C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B5BAD77116ACF7ED59515C8 /* Pods-TheFlightTrackerApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -694,6 +825,7 @@
 		};
 		0F35DBC02737C636002C3E5C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3978035F8536C4F4643FFA8D /* Pods-TheFlightTrackerApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -713,6 +845,7 @@
 		};
 		0F35DBC22737C636002C3E5C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97077CB6239193C3519BE090 /* Pods-TheFlightTrackerAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -735,6 +868,7 @@
 		};
 		0F35DBC32737C636002C3E5C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDD415CB63CB0FBC9F529175 /* Pods-TheFlightTrackerAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -757,6 +891,7 @@
 		};
 		0F35DBC52737C636002C3E5C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EE1BCC93D27FCC67B2CE0C1 /* Pods-TheFlightTrackerApp-TheFlightTrackerAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -777,6 +912,7 @@
 		};
 		0F35DBC62737C636002C3E5C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A69A11565C7C30B2D3B7BBF /* Pods-TheFlightTrackerApp-TheFlightTrackerAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

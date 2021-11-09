@@ -24,4 +24,3 @@ public extension ViewIdentifier {
 }
 
 extension NSObject: ViewIdentifier {}
-

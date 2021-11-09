@@ -37,8 +37,10 @@ extension FlightsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: FlightCell.viewIdentifier,
-                                                 for: indexPath) as! FlightCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: FlightCell.viewIdentifier,
+                                                       for: indexPath) as? FlightCell else {
+            return UITableViewCell()
+        }
         let airport = viewModel.airportsConnectedModel[indexPath.row]
         let distance = viewModel.distanceFromSchiphol(to: airport)
         cell.populateUI(model: airport, distance: distance)

@@ -7,20 +7,19 @@
 
 import Foundation
 
-
 final class UserDefaultsContainer {
 
     struct Key {
         static let isKm = "isKm"
     }
 
-    let IsInKmDefaultValue = "true"
+    let isInKmDefaultValue = "true"
 
     // MARK: - Initialization
     init() {
         UserDefaults
             .standard
-            .register(defaults: [Key.isKm: IsInKmDefaultValue])
+            .register(defaults: [Key.isKm: isInKmDefaultValue])
     }
 }
 

@@ -163,11 +163,10 @@ extension AirportsView {
                                           reuseIdentifier: Constants.identifier)
         annotationView?.rightCalloutAccessoryView = detailDisclosureButton
         annotationView?.canShowCallout = true
-        
     }
     
     private func setAnnotationImage(for annotation: MKAnnotation) {
-        guard !furthestAirports.isEmpty && airportModels.count > 0 else { return }
+        guard !furthestAirports.isEmpty else { return }
         
         if furthestAirports[0].name == annotation.title
             || furthestAirports[1].name == annotation.title {
@@ -208,8 +207,7 @@ extension AirportsView {
     func detailDisclosureTapped(on view: MKAnnotationView) -> AirportDetailsModel? {
         var nearestAirport: AirportsModel?
         
-        for firstAirport in airportModels {
-            if firstAirport.name == view.annotation?.title {
+        for firstAirport in airportModels where firstAirport.name == view.annotation?.title {
                 
                 for secondAirport in airportModels {
                     let distance = firstAirport.distance(isKm, to: secondAirport.location)
@@ -223,12 +221,8 @@ extension AirportsView {
                 let airportDetails = AirportDetailsModel(airport: firstAirport,
                                                          nearestAirport: nearestAirport?.name,
                                                          airportsDistance: Constants.airportsDistance)
-                
                 return airportDetails
             }
-        }
         return nil
     }
-
-
 }

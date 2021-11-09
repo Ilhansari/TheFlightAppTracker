@@ -18,7 +18,7 @@ struct NetworkService<Resource> where Resource: Codable {
 
     var session: URLSessionProtocol
 
-    private var OK_200: Int {
+    private var successStatusCode: Int {
         return 200
     }
     
@@ -33,7 +33,7 @@ extension NetworkService {
 
     func getData(_ completion: @escaping (Result<[Resource], Error>) -> Void) {
 
-        let dataTask = session.dataTask(with: resourceURL.url) { data, response, error in
+        let dataTask = session.dataTask(with: resourceURL.url) { data, response, _ in
             guard let response = response as? HTTPURLResponse else {
                 return completion(.failure(.invalidData))
             }
@@ -43,7 +43,7 @@ extension NetworkService {
     }
 
     private func map(_ data: Data?, from response: HTTPURLResponse) -> Result<[Resource], Error> {
-        guard response.statusCode == OK_200,
+        guard response.statusCode == successStatusCode,
               let data = data,
               let resources = try? JSONDecoder().decode([Resource].self, from: data) else {
             return .failure(.invalidData)
@@ -51,4 +51,3 @@ extension NetworkService {
         return .success(resources)
     }
 }
-

@@ -43,10 +43,8 @@ final class SettingsView: UIView {
 
 // MARK: - Arrange Views
 private extension SettingsView {
-    
     func arrangeViews() {
         backgroundColor = .appBackgroundColor
-        
         addSubview(stackView)
         stackView.anchor(top: safeAreaLayoutGuide.topAnchor,
                          leading: leadingAnchor,
@@ -56,4 +54,3 @@ private extension SettingsView {
                                                                          right: 16.0))
     }
 }
-

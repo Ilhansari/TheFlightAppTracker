@@ -5,12 +5,9 @@
 //  Created by Ilhan Sari on 8.11.2021.
 //
 
-import Foundation
-
 final class UserDefaultsService {
     
     static let shared = UserDefaultsService()
-
 
     var userDefaultsContainer: UserDefaultsProtocol
 

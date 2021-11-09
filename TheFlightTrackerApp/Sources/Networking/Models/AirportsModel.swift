@@ -9,6 +9,7 @@ import Foundation
 import CoreLocation
 
 struct AirportsModel: Codable, Equatable {
+
     let id: String
     let latitude: Double
     let longitude: Double
@@ -16,20 +17,13 @@ struct AirportsModel: Codable, Equatable {
     let city: String
     let countryId: String
 
-    /// Setup airport location.
-    ///
     var location: CLLocation {
       return CLLocation(latitude: latitude,
                         longitude: longitude)
     }
 
-    /// Calculate distance from two core location points in km
-    /// or in miles.
-    ///
-    /// Used to calculate the distance between two airports.
-    ///
-    func distance(_ isInKm: Bool = true, to location: CLLocation) -> CLLocationDistance {
-      guard isInKm else {
+    func distance(_ isKm: Bool = true, to location: CLLocation) -> CLLocationDistance {
+      guard isKm else {
         return self.location.distance(from: location) * 0.000621371
       }
       return self.location.distance(from: location) / 1000

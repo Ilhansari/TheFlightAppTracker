@@ -93,7 +93,8 @@ extension AirportDetailView {
         nameLabel.text = "NAME: \(model.airport.name)"
         cityLabel.text = "CITY: \(model.airport.city)"
         countyIdLabel.text = "COUNTRY ID: \(model.airport.countryId)"
-        nearestAirportLabel.text = "NEAREST AIRPORT: \(model.nearestAirport ?? "")"
+        let noNearestAirport = "The nearest Airport could not be found."
+        nearestAirportLabel.text = "NEAREST AIRPORT: \(model.nearestAirport ?? noNearestAirport)"
         let unit = isKm ? Constants.kmUnit : Constants.milesUnit
         let airportDistance = String(format: Constants.distanceFormat, model.airportsDistance, unit)
         distanceAirportLabel.text = "DISTANCE AIRPORT: \(airportDistance)"

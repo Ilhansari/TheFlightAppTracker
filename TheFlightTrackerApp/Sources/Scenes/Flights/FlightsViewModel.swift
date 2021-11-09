@@ -18,6 +18,8 @@ final class FlightsViewModel {
     private enum Constants {
         static let distanceFormatString = "%.2f %@"
         static let schipholAirportID = "AMS"
+        static let kmValue = "km"
+        static let milesValue = "mi"
 
         static let schipholLocation: CLLocation = CLLocation(latitude: 52.30907, longitude: 4.763385)
     }
@@ -58,7 +60,7 @@ final class FlightsViewModel {
 
     func distanceFromSchiphol(to airport: AirportsModel) -> String {
         let distance = airport.distance(isKm, to: Constants.schipholLocation)
-        let unit = isKm ? "km" : "mi"
+        let unit = isKm ? Constants.kmValue : Constants.milesValue
         let airportDistance = String(format: Constants.distanceFormatString, distance, unit)
         return airportDistance
     }
@@ -101,18 +103,17 @@ private extension FlightsViewModel {
     }
 }
 
-
 // MARK: - Filter Airports/Flights Distance From Schiphol Location
 extension FlightsViewModel {
 
     func filterFlightsFromSchiphol() {
-        let _ = flightsModel
+         _ = flightsModel
             .filter { $0.departureAirportId == Constants.schipholAirportID }
             .map { flightsFilterConnected($0) }
     }
 
     func filterAirportsConnectedToSchiphol() {
-        let _ = airportsModel.compactMap { airportsFilterConnected($0) }
+         _ = airportsModel.compactMap { airportsFilterConnected($0) }
     }
 
     func sortConnectedAirports() {
@@ -131,12 +132,10 @@ extension FlightsViewModel {
     }
 
     func airportsFilterConnected(_ airport: AirportsModel) {
-        for flight in flightsConnectedModel {
-            if flight.arrivalAirportId == airport.id {
+        for flight in flightsConnectedModel where flight.arrivalAirportId == airport.id {
                 if !airportsConnectedModel.contains(where: { $0.id == airport.id }) {
                     airportsConnectedModel.append(airport)
                 }
             }
         }
-    }
 }
