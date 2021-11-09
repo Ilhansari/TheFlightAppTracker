@@ -14,26 +14,22 @@ struct NetworkService<Resource> where Resource: Codable {
         case invalidData
     }
 
-    var resourceURL: NetworkEndpoint
-
-    var session: URLSessionProtocol
+    private var resourceURL: NetworkEndpoint
 
     private var successStatusCode: Int {
         return 200
     }
     
-    init(_ resourceURL: NetworkEndpoint, session: URLSessionProtocol = URLSession.shared) {
+    init(_ resourceURL: NetworkEndpoint) {
         self.resourceURL = resourceURL
-        self.session = session
     }
-
 }
 
 extension NetworkService {
 
     func getData(_ completion: @escaping (Result<[Resource], Error>) -> Void) {
 
-        let dataTask = session.dataTask(with: resourceURL.url) { data, response, _ in
+        let dataTask = URLSession.shared.dataTask(with: resourceURL.url) { data, response, _ in
             guard let response = response as? HTTPURLResponse else {
                 return completion(.failure(.invalidData))
             }

@@ -11,7 +11,7 @@ final class FlightsView: UIView {
     
     private(set) lazy var tableView: UITableView = {
         let tableView = UITableView()
-        tableView.register(FlightCell.self, forCellReuseIdentifier: FlightCell.viewIdentifier)
+        tableView.register(FlightCell.self, forCellReuseIdentifier: FlightCell.identifier)
         return tableView
     }()
     
@@ -26,10 +26,18 @@ final class FlightsView: UIView {
     }
 }
 
+// MARK: - Arrange Views
 private extension FlightsView {
     
     func arrangeViews() {
         addSubview(tableView)
-        tableView.fillSuperview()
+
+        NSLayoutConstraint.activate([
+            tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            tableView.topAnchor.constraint(equalTo: topAnchor),
+            tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
+        tableView.translatesAutoresizingMaskIntoConstraints = false
     }
 }

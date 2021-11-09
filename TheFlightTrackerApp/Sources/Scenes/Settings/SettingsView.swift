@@ -26,6 +26,8 @@ final class SettingsView: UIView {
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
         stackView.spacing = 10.0
+        stackView.layoutMargins = UIEdgeInsets(top: 16.0, left: 16.0, bottom: 0.0, right: 16.0)
+        stackView.isLayoutMarginsRelativeArrangement = true
         return stackView
     }()
     
@@ -46,11 +48,12 @@ private extension SettingsView {
     func arrangeViews() {
         backgroundColor = .appBackgroundColor
         addSubview(stackView)
-        stackView.anchor(top: safeAreaLayoutGuide.topAnchor,
-                         leading: leadingAnchor,
-                         trailing: trailingAnchor, padding: UIEdgeInsets(top: 16.0,
-                                                                         left: 16.0,
-                                                                         bottom: 16.0,
-                                                                         right: 16.0))
+  
+        NSLayoutConstraint.activate([
+            stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            stackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            stackView.trailingAnchor.constraint(equalTo: trailingAnchor)
+        ])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
     }
 }

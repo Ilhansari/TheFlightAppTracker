@@ -8,7 +8,7 @@
 import UIKit
 
 final class AirportDetailView: UIView {
-
+    
     private enum Constants {
         static let distanceFormat = "%.2f %@"
         static let kmUnit = "km"
@@ -22,19 +22,19 @@ final class AirportDetailView: UIView {
                                                    textAlignment: .center)
     
     private lazy var idLabel: UILabel = .create()
-
+    
     private lazy var latitudeLabel: UILabel = .create()
-
+    
     private lazy var longitudeLabel: UILabel = .create()
-
+    
     private lazy var nameLabel: UILabel = .create()
-
+    
     private lazy var cityLabel: UILabel = .create()
-
+    
     private lazy var countyIdLabel: UILabel = .create()
-
+    
     private lazy var nearestAirportLabel: UILabel = .create()
-
+    
     private lazy var distanceAirportLabel: UILabel = .create()
     
     var isKm = UserDefaultsService.shared.isKm
@@ -56,7 +56,7 @@ final class AirportDetailView: UIView {
         stackView.spacing = 20.0
         return stackView
     }()
-
+    
     init() {
         super.init(frame: .zero)
         
@@ -75,10 +75,13 @@ private extension AirportDetailView {
         backgroundColor = .appBackgroundColor
         
         addSubview(stackView)
-        stackView.anchor(top: safeAreaLayoutGuide.topAnchor,
-                         leading: leadingAnchor,
-                         trailing: trailingAnchor,
-                         padding: UIEdgeInsets(top: 24.0, left: 12.0, bottom: 0.0, right: 12.0))
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 24.0),
+            stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12.0),
+            stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 12.0)
+        ])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        
     }
 }
 

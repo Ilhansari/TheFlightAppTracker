@@ -13,6 +13,8 @@ final class FlightCell: UITableViewCell {
     private lazy var nameLabel: UILabel = .create(textColor: .appColor)
     
     private lazy var distanceLabel: UILabel = .create(textColor: .systemIndigo)
+
+    static let identifier = "FlightCell"
     
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [
@@ -22,6 +24,8 @@ final class FlightCell: UITableViewCell {
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
         stackView.spacing = 10.0
+        stackView.layoutMargins = UIEdgeInsets(top: 12.0, left: 12.0, bottom: 12.0, right: 12.0)
+        stackView.isLayoutMarginsRelativeArrangement = true
         return stackView
     }()
 
@@ -42,10 +46,14 @@ private extension FlightCell {
     
     func arrangeViews() {
         addSubview(stackView)
-        stackView.fillSuperview(with: UIEdgeInsets(top: 12.0,
-                                                   left: 12.0,
-                                                   bottom: 12.0,
-                                                   right: 12.0))
+
+        NSLayoutConstraint.activate([
+            stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            stackView.topAnchor.constraint(equalTo: topAnchor),
+            stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            stackView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
     }
 }
 

@@ -12,11 +12,8 @@
 		0F1CE3772737F63800EAFE92 /* AirportsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1CE3762737F63800EAFE92 /* AirportsView.swift */; };
 		0F1CE3792737F64200EAFE92 /* AirportsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1CE3782737F64200EAFE92 /* AirportsViewModel.swift */; };
 		0F1CE37B2737F65600EAFE92 /* AirportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1CE37A2737F65600EAFE92 /* AirportsViewController.swift */; };
-		0F1CE3A62738084A00EAFE92 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1CE3A52738084A00EAFE92 /* UIView+Extensions.swift */; };
 		0F1CE3E02738267F00EAFE92 /* NetworkEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1CE3DF2738267F00EAFE92 /* NetworkEndPoint.swift */; };
-		0F1CE3E42738274B00EAFE92 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1CE3E32738274B00EAFE92 /* URLSessionProtocol.swift */; };
 		0F1CE3E72738278300EAFE92 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1CE3E62738278300EAFE92 /* NetworkService.swift */; };
-		0F1CE3E927382AAC00EAFE92 /* URLSession+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1CE3E827382AAC00EAFE92 /* URLSession+Protocol.swift */; };
 		0F1CE3EC27382AF700EAFE92 /* AirportsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1CE3EB27382AF700EAFE92 /* AirportsModel.swift */; };
 		0F1CE3F22738F20000EAFE92 /* AirportDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1CE3F12738F20000EAFE92 /* AirportDetailViewController.swift */; };
 		0F1CE3F42738F21700EAFE92 /* AirportDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1CE3F32738F21700EAFE92 /* AirportDetailView.swift */; };
@@ -33,7 +30,6 @@
 		0FDED83827391B89007C6FA0 /* FlightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED83727391B89007C6FA0 /* FlightsView.swift */; };
 		0FDED83A27391BCB007C6FA0 /* FlightsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED83927391BCB007C6FA0 /* FlightsViewModel.swift */; };
 		0FDED83D27391CDD007C6FA0 /* FlightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED83C27391CDD007C6FA0 /* FlightCell.swift */; };
-		0FDED83F27391EA6007C6FA0 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED83E27391EA6007C6FA0 /* NSObject+Extensions.swift */; };
 		0FDED841273922AA007C6FA0 /* FlightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED840273922AA007C6FA0 /* FlightModel.swift */; };
 		0FDED84427393B98007C6FA0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED84327393B98007C6FA0 /* SettingsView.swift */; };
 		0FDED84627393BA3007C6FA0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED84527393BA3007C6FA0 /* SettingsViewController.swift */; };
@@ -41,9 +37,6 @@
 		0FDED84B27393CF9007C6FA0 /* UserDefaultsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED84A27393CF9007C6FA0 /* UserDefaultsContainer.swift */; };
 		0FDED84D27393D15007C6FA0 /* UserDefaultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED84C27393D15007C6FA0 /* UserDefaultProtocol.swift */; };
 		0FDED850273962A3007C6FA0 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED84F273962A3007C6FA0 /* UIViewController+Extension.swift */; };
-		2ADA1EDEDDF1B6DD0AE26F67 /* Pods_TheFlightTrackerApp_TheFlightTrackerAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6AC82DB0F389190FBD579B6 /* Pods_TheFlightTrackerApp_TheFlightTrackerAppUITests.framework */; };
-		2E826028E3077DF1ACD2DFF5 /* Pods_TheFlightTrackerAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 695571614A94B093156E3496 /* Pods_TheFlightTrackerAppTests.framework */; };
-		31413F2BBBB93DEF289A2D33 /* Pods_TheFlightTrackerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D6A8AA2ADE3CC016559B99 /* Pods_TheFlightTrackerApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,11 +75,8 @@
 		0F1CE3762737F63800EAFE92 /* AirportsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsView.swift; sourceTree = "<group>"; };
 		0F1CE3782737F64200EAFE92 /* AirportsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsViewModel.swift; sourceTree = "<group>"; };
 		0F1CE37A2737F65600EAFE92 /* AirportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsViewController.swift; sourceTree = "<group>"; };
-		0F1CE3A52738084A00EAFE92 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		0F1CE3DF2738267F00EAFE92 /* NetworkEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEndPoint.swift; sourceTree = "<group>"; };
-		0F1CE3E32738274B00EAFE92 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 		0F1CE3E62738278300EAFE92 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		0F1CE3E827382AAC00EAFE92 /* URLSession+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Protocol.swift"; sourceTree = "<group>"; };
 		0F1CE3EB27382AF700EAFE92 /* AirportsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsModel.swift; sourceTree = "<group>"; };
 		0F1CE3F12738F20000EAFE92 /* AirportDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailViewController.swift; sourceTree = "<group>"; };
 		0F1CE3F32738F21700EAFE92 /* AirportDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailView.swift; sourceTree = "<group>"; };
@@ -109,7 +99,6 @@
 		0FDED83727391B89007C6FA0 /* FlightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsView.swift; sourceTree = "<group>"; };
 		0FDED83927391BCB007C6FA0 /* FlightsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsViewModel.swift; sourceTree = "<group>"; };
 		0FDED83C27391CDD007C6FA0 /* FlightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightCell.swift; sourceTree = "<group>"; };
-		0FDED83E27391EA6007C6FA0 /* NSObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
 		0FDED840273922AA007C6FA0 /* FlightModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightModel.swift; sourceTree = "<group>"; };
 		0FDED84327393B98007C6FA0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		0FDED84527393BA3007C6FA0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -117,15 +106,6 @@
 		0FDED84A27393CF9007C6FA0 /* UserDefaultsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsContainer.swift; sourceTree = "<group>"; };
 		0FDED84C27393D15007C6FA0 /* UserDefaultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultProtocol.swift; sourceTree = "<group>"; };
 		0FDED84F273962A3007C6FA0 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		1B5BAD77116ACF7ED59515C8 /* Pods-TheFlightTrackerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheFlightTrackerApp.debug.xcconfig"; path = "Target Support Files/Pods-TheFlightTrackerApp/Pods-TheFlightTrackerApp.debug.xcconfig"; sourceTree = "<group>"; };
-		3978035F8536C4F4643FFA8D /* Pods-TheFlightTrackerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheFlightTrackerApp.release.xcconfig"; path = "Target Support Files/Pods-TheFlightTrackerApp/Pods-TheFlightTrackerApp.release.xcconfig"; sourceTree = "<group>"; };
-		3A69A11565C7C30B2D3B7BBF /* Pods-TheFlightTrackerApp-TheFlightTrackerAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheFlightTrackerApp-TheFlightTrackerAppUITests.release.xcconfig"; path = "Target Support Files/Pods-TheFlightTrackerApp-TheFlightTrackerAppUITests/Pods-TheFlightTrackerApp-TheFlightTrackerAppUITests.release.xcconfig"; sourceTree = "<group>"; };
-		5EE1BCC93D27FCC67B2CE0C1 /* Pods-TheFlightTrackerApp-TheFlightTrackerAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheFlightTrackerApp-TheFlightTrackerAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-TheFlightTrackerApp-TheFlightTrackerAppUITests/Pods-TheFlightTrackerApp-TheFlightTrackerAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		695571614A94B093156E3496 /* Pods_TheFlightTrackerAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheFlightTrackerAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		97077CB6239193C3519BE090 /* Pods-TheFlightTrackerAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheFlightTrackerAppTests.debug.xcconfig"; path = "Target Support Files/Pods-TheFlightTrackerAppTests/Pods-TheFlightTrackerAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B6AC82DB0F389190FBD579B6 /* Pods_TheFlightTrackerApp_TheFlightTrackerAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheFlightTrackerApp_TheFlightTrackerAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BDD415CB63CB0FBC9F529175 /* Pods-TheFlightTrackerAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheFlightTrackerAppTests.release.xcconfig"; path = "Target Support Files/Pods-TheFlightTrackerAppTests/Pods-TheFlightTrackerAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		C7D6A8AA2ADE3CC016559B99 /* Pods_TheFlightTrackerApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheFlightTrackerApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +113,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31413F2BBBB93DEF289A2D33 /* Pods_TheFlightTrackerApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +120,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E826028E3077DF1ACD2DFF5 /* Pods_TheFlightTrackerAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,7 +127,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2ADA1EDEDDF1B6DD0AE26F67 /* Pods_TheFlightTrackerApp_TheFlightTrackerAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,11 +166,9 @@
 		0F1CE36E2737E24500EAFE92 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				0FDED83E27391EA6007C6FA0 /* NSObject+Extensions.swift */,
 				0F3F54A12739ABDF005935E8 /* UIColor+Extensions.swift */,
 				0F1CE36F2737E29500EAFE92 /* UIImage+Extension.swift */,
 				0FDED82F27390B0D007C6FA0 /* UILabel+Extension.swift */,
-				0F1CE3A52738084A00EAFE92 /* UIView+Extensions.swift */,
 				0FDED84F273962A3007C6FA0 /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
@@ -232,8 +207,6 @@
 			children = (
 				0F1CE3DF2738267F00EAFE92 /* NetworkEndPoint.swift */,
 				0F1CE3E62738278300EAFE92 /* NetworkService.swift */,
-				0F1CE3E827382AAC00EAFE92 /* URLSession+Protocol.swift */,
-				0F1CE3E32738274B00EAFE92 /* URLSessionProtocol.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -264,8 +237,6 @@
 				0F35DB952737C635002C3E5C /* Products */,
 				0F35DBAD2737C636002C3E5C /* TheFlightTrackerAppTests */,
 				0F35DBB82737C636002C3E5C /* TheFlightTrackerAppUITests */,
-				3A8A56414AD6F3D2D7DE75C0 /* Pods */,
-				D3687C48C550CCD9F2AECF76 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -356,29 +327,6 @@
 			path = UserDefaults;
 			sourceTree = "<group>";
 		};
-		3A8A56414AD6F3D2D7DE75C0 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1B5BAD77116ACF7ED59515C8 /* Pods-TheFlightTrackerApp.debug.xcconfig */,
-				3978035F8536C4F4643FFA8D /* Pods-TheFlightTrackerApp.release.xcconfig */,
-				5EE1BCC93D27FCC67B2CE0C1 /* Pods-TheFlightTrackerApp-TheFlightTrackerAppUITests.debug.xcconfig */,
-				3A69A11565C7C30B2D3B7BBF /* Pods-TheFlightTrackerApp-TheFlightTrackerAppUITests.release.xcconfig */,
-				97077CB6239193C3519BE090 /* Pods-TheFlightTrackerAppTests.debug.xcconfig */,
-				BDD415CB63CB0FBC9F529175 /* Pods-TheFlightTrackerAppTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		D3687C48C550CCD9F2AECF76 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C7D6A8AA2ADE3CC016559B99 /* Pods_TheFlightTrackerApp.framework */,
-				B6AC82DB0F389190FBD579B6 /* Pods_TheFlightTrackerApp_TheFlightTrackerAppUITests.framework */,
-				695571614A94B093156E3496 /* Pods_TheFlightTrackerAppTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -386,7 +334,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F35DBBE2737C636002C3E5C /* Build configuration list for PBXNativeTarget "TheFlightTrackerApp" */;
 			buildPhases = (
-				F982325E73A42DF4AE085A48 /* [CP] Check Pods Manifest.lock */,
 				0F35DB902737C635002C3E5C /* Sources */,
 				0F35DB912737C635002C3E5C /* Frameworks */,
 				0F35DB922737C635002C3E5C /* Resources */,
@@ -406,7 +353,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F35DBC12737C636002C3E5C /* Build configuration list for PBXNativeTarget "TheFlightTrackerAppTests" */;
 			buildPhases = (
-				45AC9C95F3D37BD02C46F9ED /* [CP] Check Pods Manifest.lock */,
 				0F35DBA62737C636002C3E5C /* Sources */,
 				0F35DBA72737C636002C3E5C /* Frameworks */,
 				0F35DBA82737C636002C3E5C /* Resources */,
@@ -425,7 +371,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F35DBC42737C636002C3E5C /* Build configuration list for PBXNativeTarget "TheFlightTrackerAppUITests" */;
 			buildPhases = (
-				63BD67CB16A2F3B1B78C0171 /* [CP] Check Pods Manifest.lock */,
 				0F35DBB12737C636002C3E5C /* Sources */,
 				0F35DBB22737C636002C3E5C /* Frameworks */,
 				0F35DBB32737C636002C3E5C /* Resources */,
@@ -527,72 +472,6 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
-		45AC9C95F3D37BD02C46F9ED /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TheFlightTrackerAppTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		63BD67CB16A2F3B1B78C0171 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TheFlightTrackerApp-TheFlightTrackerAppUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F982325E73A42DF4AE085A48 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TheFlightTrackerApp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -607,11 +486,8 @@
 				0FDED841273922AA007C6FA0 /* FlightModel.swift in Sources */,
 				0FDED850273962A3007C6FA0 /* UIViewController+Extension.swift in Sources */,
 				0F35DB982737C635002C3E5C /* AppDelegate.swift in Sources */,
-				0FDED83F27391EA6007C6FA0 /* NSObject+Extensions.swift in Sources */,
-				0F1CE3E927382AAC00EAFE92 /* URLSession+Protocol.swift in Sources */,
 				0FDED84D27393D15007C6FA0 /* UserDefaultProtocol.swift in Sources */,
 				0FDED82E273901DA007C6FA0 /* AirportDetailsModel.swift in Sources */,
-				0F1CE3E42738274B00EAFE92 /* URLSessionProtocol.swift in Sources */,
 				0F35DB9A2737C635002C3E5C /* SceneDelegate.swift in Sources */,
 				0F1CE37B2737F65600EAFE92 /* AirportsViewController.swift in Sources */,
 				0FDED83027390B0D007C6FA0 /* UILabel+Extension.swift in Sources */,
@@ -622,7 +498,6 @@
 				0FDED83A27391BCB007C6FA0 /* FlightsViewModel.swift in Sources */,
 				0F1CE3F22738F20000EAFE92 /* AirportDetailViewController.swift in Sources */,
 				0F1CE36D2737D11C00EAFE92 /* TabbarController.swift in Sources */,
-				0F1CE3A62738084A00EAFE92 /* UIView+Extensions.swift in Sources */,
 				0F1CE3702737E29500EAFE92 /* UIImage+Extension.swift in Sources */,
 				0F1CE3E02738267F00EAFE92 /* NetworkEndPoint.swift in Sources */,
 				0F1CE3E72738278300EAFE92 /* NetworkService.swift in Sources */,
@@ -794,7 +669,6 @@
 		};
 		0F35DBBF2737C636002C3E5C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B5BAD77116ACF7ED59515C8 /* Pods-TheFlightTrackerApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -814,7 +688,6 @@
 		};
 		0F35DBC02737C636002C3E5C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3978035F8536C4F4643FFA8D /* Pods-TheFlightTrackerApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -834,7 +707,6 @@
 		};
 		0F35DBC22737C636002C3E5C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 97077CB6239193C3519BE090 /* Pods-TheFlightTrackerAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -857,7 +729,6 @@
 		};
 		0F35DBC32737C636002C3E5C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BDD415CB63CB0FBC9F529175 /* Pods-TheFlightTrackerAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -880,7 +751,6 @@
 		};
 		0F35DBC52737C636002C3E5C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5EE1BCC93D27FCC67B2CE0C1 /* Pods-TheFlightTrackerApp-TheFlightTrackerAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -901,7 +771,6 @@
 		};
 		0F35DBC62737C636002C3E5C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A69A11565C7C30B2D3B7BBF /* Pods-TheFlightTrackerApp-TheFlightTrackerAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -81,7 +81,14 @@ private extension AirportsView {
     
     func arrangeViews() {
         addSubview(mapView)
-        mapView.fillSuperview()
+
+        NSLayoutConstraint.activate([
+            mapView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            mapView.topAnchor.constraint(equalTo: topAnchor),
+            mapView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            mapView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
+        mapView.translatesAutoresizingMaskIntoConstraints = false
     }
 }
 

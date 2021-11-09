@@ -37,7 +37,7 @@ extension FlightsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: FlightCell.viewIdentifier,
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: FlightCell.identifier,
                                                        for: indexPath) as? FlightCell else {
             return UITableViewCell()
         }
