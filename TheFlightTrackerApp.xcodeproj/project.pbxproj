@@ -34,8 +34,6 @@
 		0FDED84427393B98007C6FA0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED84327393B98007C6FA0 /* SettingsView.swift */; };
 		0FDED84627393BA3007C6FA0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED84527393BA3007C6FA0 /* SettingsViewController.swift */; };
 		0FDED84827393C68007C6FA0 /* UserDefaultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED84727393C68007C6FA0 /* UserDefaultService.swift */; };
-		0FDED84B27393CF9007C6FA0 /* UserDefaultsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED84A27393CF9007C6FA0 /* UserDefaultsContainer.swift */; };
-		0FDED84D27393D15007C6FA0 /* UserDefaultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED84C27393D15007C6FA0 /* UserDefaultProtocol.swift */; };
 		0FDED850273962A3007C6FA0 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDED84F273962A3007C6FA0 /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -103,8 +101,6 @@
 		0FDED84327393B98007C6FA0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		0FDED84527393BA3007C6FA0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0FDED84727393C68007C6FA0 /* UserDefaultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultService.swift; sourceTree = "<group>"; };
-		0FDED84A27393CF9007C6FA0 /* UserDefaultsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsContainer.swift; sourceTree = "<group>"; };
-		0FDED84C27393D15007C6FA0 /* UserDefaultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultProtocol.swift; sourceTree = "<group>"; };
 		0FDED84F273962A3007C6FA0 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -320,8 +316,6 @@
 		0FDED84927393CC6007C6FA0 /* UserDefaults */ = {
 			isa = PBXGroup;
 			children = (
-				0FDED84C27393D15007C6FA0 /* UserDefaultProtocol.swift */,
-				0FDED84A27393CF9007C6FA0 /* UserDefaultsContainer.swift */,
 				0FDED84727393C68007C6FA0 /* UserDefaultService.swift */,
 			);
 			path = UserDefaults;
@@ -486,7 +480,6 @@
 				0FDED841273922AA007C6FA0 /* FlightModel.swift in Sources */,
 				0FDED850273962A3007C6FA0 /* UIViewController+Extension.swift in Sources */,
 				0F35DB982737C635002C3E5C /* AppDelegate.swift in Sources */,
-				0FDED84D27393D15007C6FA0 /* UserDefaultProtocol.swift in Sources */,
 				0FDED82E273901DA007C6FA0 /* AirportDetailsModel.swift in Sources */,
 				0F35DB9A2737C635002C3E5C /* SceneDelegate.swift in Sources */,
 				0F1CE37B2737F65600EAFE92 /* AirportsViewController.swift in Sources */,
@@ -502,7 +495,6 @@
 				0F1CE3E02738267F00EAFE92 /* NetworkEndPoint.swift in Sources */,
 				0F1CE3E72738278300EAFE92 /* NetworkService.swift in Sources */,
 				0FDED84627393BA3007C6FA0 /* SettingsViewController.swift in Sources */,
-				0FDED84B27393CF9007C6FA0 /* UserDefaultsContainer.swift in Sources */,
 				0FDED83627391B7D007C6FA0 /* FlightsViewController.swift in Sources */,
 				0FDED84827393C68007C6FA0 /* UserDefaultService.swift in Sources */,
 			);

@@ -5,15 +5,23 @@
 //  Created by Ilhan Sari on 8.11.2021.
 //
 
+import Foundation
+
 final class UserDefaultsService {
     
     static let shared = UserDefaultsService()
 
-    var userDefaultsContainer: UserDefaultsProtocol
+    struct Key {
+        static let isKm = "isKm"
+    }
+
+    let isInKmDefaultValue = "true"
 
     // MARK: - Initialization
-    init(userDefaultsContainer: UserDefaultsProtocol = UserDefaultsContainer()) {
-        self.userDefaultsContainer = userDefaultsContainer
+    init() {
+        UserDefaults
+            .standard
+            .register(defaults: [Key.isKm: isInKmDefaultValue])
     }
 }
 
@@ -22,10 +30,14 @@ extension UserDefaultsService {
 
     var isKm: Bool {
         get {
-            userDefaultsContainer.isKm
+            UserDefaults
+                .standard
+                .bool(forKey: Key.isKm)
         }
         set {
-            userDefaultsContainer.isKm = newValue
+            UserDefaults
+                .standard
+                .setValue(newValue, forKey: Key.isKm)
         }
     }
 }
