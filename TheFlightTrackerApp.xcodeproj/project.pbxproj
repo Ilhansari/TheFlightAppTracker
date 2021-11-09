@@ -223,8 +223,8 @@
 		0F1CE3DE273823F300EAFE92 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				0F1CE3E52738277300EAFE92 /* Services */,
 				0F1CE3EA27382AEE00EAFE92 /* Models */,
+				0F1CE3E52738277300EAFE92 /* Services */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
