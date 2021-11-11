@@ -7,9 +7,6 @@
 
 import UIKit
 
-/// Extensions to retrieve all images
-///
-/// Images are inside the Assets.xcassets
 extension UIImage {
     static let airportsIcon = UIImage(named: "airportsIcon")
     static let flightsIcon = UIImage(named: "flightsIcon")
