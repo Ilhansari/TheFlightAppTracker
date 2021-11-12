@@ -35,7 +35,7 @@ private extension TabbarController {
 
     func configureTabbar() {
         tabBar.isTranslucent = false
-        view.backgroundColor = .black
+        view.backgroundColor = .appBackgroundColor
         UITabBar.appearance().tintColor = .appColor
     }
 
