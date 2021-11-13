@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct NetworkService<Resource> where Resource: Codable {
+struct NetworkService<Resource> where Resource: Decodable {
 
     enum Error: Swift.Error {
         case connectivity

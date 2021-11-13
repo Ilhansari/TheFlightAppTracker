@@ -8,7 +8,7 @@
 import Foundation
 import CoreLocation
 
-struct AirportsModel: Codable, Equatable {
+struct AirportsModel: Decodable, Equatable {
     
     let id: String
     let latitude: Double

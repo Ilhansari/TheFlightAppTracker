@@ -173,8 +173,8 @@
 		0F1CE3712737E34800EAFE92 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				0FDED84927393CC6007C6FA0 /* UserDefaults */,
 				0F1CE36E2737E24500EAFE92 /* Extensions */,
+				0FDED84927393CC6007C6FA0 /* UserDefaults */,
 			);
 			path = Common;
 			sourceTree = "<group>";

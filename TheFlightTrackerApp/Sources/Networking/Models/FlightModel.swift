@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FlightModel: Codable, Equatable {
+struct FlightModel: Decodable, Equatable {
 
     var airlineId: String
     var flightNumber: Int
