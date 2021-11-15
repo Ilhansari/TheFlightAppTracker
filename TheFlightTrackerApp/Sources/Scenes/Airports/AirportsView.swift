@@ -182,7 +182,7 @@ extension AirportsView {
             annotationView?.image = .flightAnnotation
         }
     }
-    
+
     func foundAirportsFurthestApart() {
         var defaultDistance: CLLocationDistance = .zero
         let lastAirports = airportModels.reversed()

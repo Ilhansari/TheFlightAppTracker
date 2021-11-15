@@ -39,6 +39,12 @@ final class FlightCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        nameLabel.text = nil
+        distanceLabel.text = nil
+    }
 }
 
 // MARK: - Arrange Views
