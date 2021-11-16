@@ -24,7 +24,7 @@ final class SettingsViewController: UIViewController {
         view = viewSource
         setupSegmentedControl()
     }
-    
+
     private func setupSegmentedControl() {
         viewSource.segmentedControl.selectedSegmentIndex = isKm ? Constants.kmValue : Constants.milesValue
         viewSource.segmentedControl.addTarget(self,

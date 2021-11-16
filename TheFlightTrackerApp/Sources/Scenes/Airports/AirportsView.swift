@@ -28,7 +28,7 @@ final class AirportsView: UIView {
     
     private var annotationView: MKAnnotationView?
     
-    var airportModels = [AirportsModel]()
+    private var airportModels = [AirportsModel]()
     private var furthestAirports = [AirportsModel]()
     
     weak var delegate: AirportsViewDelegate?
@@ -73,6 +73,10 @@ final class AirportsView: UIView {
     
     func checkDistanceUnitSettings() {
         isKm = UserDefaultsService.shared.isKm
+    }
+
+    func getAirportsModel(model: [AirportsModel]) {
+        self.airportModels = model
     }
 }
 
