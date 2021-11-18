@@ -41,7 +41,7 @@ extension AirportsViewController: AirportsViewModelDelegate {
     func handleShowAlert(message: String) {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            self.showAlert(title: "Error !", message: message)
+            self.showAlert(title: "Error!", message: message)
         }
     }
     
@@ -53,7 +53,7 @@ extension AirportsViewController: AirportsViewModelDelegate {
     
     func handleData(airportsModel: [AirportsModel]) {
         DispatchQueue.main.async {
-            self.viewSource.airportModels = airportsModel
+            self.viewSource.getAirportsModel(model: airportsModel)
             self.viewSource.populateAnnotations()
             self.viewSource.foundAirportsFurthestApart()
         }
