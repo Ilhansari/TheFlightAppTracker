@@ -15,7 +15,7 @@ final class UserDefaultsService {
         static let isKm = "isKm"
     }
 
-    let isInKmDefaultValue = "true"
+    let isInKmDefaultValue = "false"
 
     // MARK: - Initialization
     init() {
